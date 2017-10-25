@@ -22,7 +22,7 @@ return view('tasks.index', compact('tasks'));
 
 
 
-public function show(){
+public function show($id){
 
 
 	//db call to find a row by id, returns the entire record as object
