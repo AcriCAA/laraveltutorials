@@ -10,7 +10,7 @@ class TasksController extends Controller
 
 
    	//db call to get all the rows in the tasks table using Eloquent model
-$tasks = Task::all(); 
+$tasks = App\Task::all(); 
 
 // return $tasks;
 
@@ -28,7 +28,7 @@ public function show($id){
 	//db call to find a row by id, returns the entire record as object
 // $task = DB::table('tasks')->find($id); 
 
-$task = Task::find($id); 
+$task = App\Task::find($id); 
 
 // return $tasks;
 
