@@ -51,11 +51,11 @@ return view('tasks.show', compact('task'));
 });
 
 // this is setting the url from urlroot/
-Route::get('/tasks/incomplete', function(){
+Route::get('/tasks/{incomplete}', function(){
 //db call to find a row by id, returns the entire record as object
 // $task = DB::table('tasks')->find($id); 
 
-$task = App\Task::incomplete()->get(); 
+$tasks = App\Task::incomplete()->get(); 
 
 // return $tasks;
 
@@ -64,7 +64,7 @@ $task = App\Task::incomplete()->get();
 
 
 //refers to the route folder and then the blade file name before .blade.php , compact creates the necessary array for the $tasks variable
-return view('tasks.show', compact('task'));
+return view('tasks.index', compact('tasks'));
 
 
 });
