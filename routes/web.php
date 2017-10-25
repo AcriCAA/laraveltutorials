@@ -11,6 +11,35 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/', function(){
+
+
+$tasks = DB::table('tasks')->get(); 
+
+// return $tasks;
+
+return view('welcome', compact('tasks'));
+
+
+});
+
+
+
+Route::get('/tasks/{task}', function($id){
+
+
+$tasks = DB::table('tasks')->find($id); 
+
+// return $tasks;
+
+dd($tasks);
+
+return view('welcome', compact('tasks'));
+
+
 });
