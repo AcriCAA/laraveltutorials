@@ -37,7 +37,7 @@ $task = DB::table('tasks')->find($id);
 
 // return $tasks;
 
-dd($tasks);
+// dd($tasks);
 
 return view('tasks.show', compact('task'));
 
