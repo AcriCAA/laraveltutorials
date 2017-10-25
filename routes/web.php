@@ -17,11 +17,24 @@
 
 
 // this is setting the url from urlroot/
-// Route::get('/tasks', function(){
-// //db call to get all the rows in the tasks table using Eloquent model
-// $tasks = App\Task::all(); 
+Route::get('/tasks', 'TasksController@index');
+
+// this is setting the url from urlroot/
+Route::get('/tasks/{task}', 'TasksController@show'); 
+
+
+
+// this is setting the url from urlroot/
+// Route::get('/tasks/', function(){
+// //db call to find a row by id, returns the entire record as object
+// // $task = DB::table('tasks')->find($id); 
+
+// $tasks = App\Task::incomplete()->get(); 
 
 // // return $tasks;
+
+// //dd= helper function for dump and die
+// // dd($tasks);
 
 
 // //refers to the route folder and then the blade file name before .blade.php , compact creates the necessary array for the $tasks variable
@@ -29,42 +42,3 @@
 
 
 // });
-
-
-// this is setting the url from urlroot/
-Route::get('/tasks/{task}', function($id){
-//db call to find a row by id, returns the entire record as object
-// $task = DB::table('tasks')->find($id); 
-
-$task = App\Task::find($id); 
-
-// return $tasks;
-
-//dd= helper function for dump and die
-// dd($tasks);
-
-
-//refers to the route folder and then the blade file name before .blade.php , compact creates the necessary array for the $tasks variable
-return view('tasks.show', compact('task'));
-
-
-});
-
-// this is setting the url from urlroot/
-Route::get('/tasks/', function(){
-//db call to find a row by id, returns the entire record as object
-// $task = DB::table('tasks')->find($id); 
-
-$tasks = App\Task::incomplete()->get(); 
-
-// return $tasks;
-
-//dd= helper function for dump and die
-// dd($tasks);
-
-
-//refers to the route folder and then the blade file name before .blade.php , compact creates the necessary array for the $tasks variable
-return view('tasks.index', compact('tasks'));
-
-
-});
