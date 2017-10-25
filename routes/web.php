@@ -17,18 +17,18 @@
 
 
 // this is setting the url from urlroot/
-Route::get('/tasks', function(){
-//db call to get all the rows in the tasks table using Eloquent model
-$tasks = App\Task::all(); 
+// Route::get('/tasks', function(){
+// //db call to get all the rows in the tasks table using Eloquent model
+// $tasks = App\Task::all(); 
 
-// return $tasks;
-
-
-//refers to the route folder and then the blade file name before .blade.php , compact creates the necessary array for the $tasks variable
-return view('tasks.index', compact('tasks'));
+// // return $tasks;
 
 
-});
+// //refers to the route folder and then the blade file name before .blade.php , compact creates the necessary array for the $tasks variable
+// return view('tasks.index', compact('tasks'));
+
+
+// });
 
 
 // this is setting the url from urlroot/
@@ -51,7 +51,7 @@ return view('tasks.show', compact('task'));
 });
 
 // this is setting the url from urlroot/
-Route::get('/tasks/{incomplete}', function($incomplete){
+Route::get('/tasks/', function(){
 //db call to find a row by id, returns the entire record as object
 // $task = DB::table('tasks')->find($id); 
 
