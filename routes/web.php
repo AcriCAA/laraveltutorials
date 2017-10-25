@@ -16,7 +16,7 @@
 // });
 
 
-Route::get('/', function(){
+Route::get('/tasks', function(){
 
 
 $tasks = DB::table('tasks')->get(); 
@@ -33,13 +33,13 @@ return view('tasks.index', compact('tasks'));
 Route::get('/tasks/{task}', function($id){
 
 
-$tasks = DB::table('tasks')->find($id); 
+$task = DB::table('tasks')->find($id); 
 
 // return $tasks;
 
 dd($tasks);
 
-return view('tasks.show', compact('tasks'));
+return view('tasks.show', compact('task'));
 
 
 });
