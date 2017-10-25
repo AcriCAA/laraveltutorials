@@ -24,13 +24,16 @@ return view('tasks.index', compact('tasks'));
 
 
 
-public function show($id){
+public function show(Task $task){ // by putting Task $task in here and matching it to the wildcard {$task in routes} (Route::get('/tasks/{task}', 'TasksController@show');), Laravel is automatically running Task::find($id) or whatever wildcard 
 
 
 	//db call to find a row by id, returns the entire record as object
 // $task = DB::table('tasks')->find($id); 
 
-$task = Task::find($id); 
+
+// this is no longer needed because of the Task $task model binding above
+// $task = Task::find($id); 
+
 
 // return $tasks;
 
