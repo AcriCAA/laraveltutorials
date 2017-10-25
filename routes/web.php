@@ -23,7 +23,7 @@ $tasks = DB::table('tasks')->get();
 
 // return $tasks;
 
-return view('welcome', compact('tasks'));
+return view('tasks.index', compact('tasks'));
 
 
 });
@@ -39,7 +39,7 @@ $tasks = DB::table('tasks')->find($id);
 
 dd($tasks);
 
-return view('welcome', compact('tasks'));
+return view('tasks.show', compact('tasks'));
 
 
 });
