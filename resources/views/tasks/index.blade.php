@@ -20,6 +20,8 @@
                 @foreach ($tasks as $task)
                 
                 <li>
+
+                    <!-- here we are building the url using the object id -->
                     <a href="/tasks/{{ $task->id }}">
                         {{$task->body}}
                     </a>
