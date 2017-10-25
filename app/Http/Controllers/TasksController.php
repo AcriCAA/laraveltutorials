@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Task; 
+
 class TasksController extends Controller
 {
    public function index(){
 
 
    	//db call to get all the rows in the tasks table using Eloquent model
-$tasks = App\Task::all(); 
+$tasks = Task::all(); 
 
 // return $tasks;
 
@@ -28,7 +30,7 @@ public function show($id){
 	//db call to find a row by id, returns the entire record as object
 // $task = DB::table('tasks')->find($id); 
 
-$task = App\Task::find($id); 
+$task = Task::find($id); 
 
 // return $tasks;
 
