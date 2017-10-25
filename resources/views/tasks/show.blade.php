@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <h1>{{$task}}</h1>
+            <h1>{{$task->body}}</h1>
 
         </div>
     </body>
