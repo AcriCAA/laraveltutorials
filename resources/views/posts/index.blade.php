@@ -77,9 +77,9 @@
         </div><!-- /.blog-main -->
 
         <aside class="col-sm-3 ml-sm-auto blog-sidebar">
-          @include('posts.about')
-          @include('posts.archives')
-          @include('posts.social')
+          @include('layouts.partials.about')
+          @include('layouts.partials.archives')
+          @include('layouts.partials.social')
         </aside><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
