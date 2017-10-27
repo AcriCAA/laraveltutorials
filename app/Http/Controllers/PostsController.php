@@ -37,7 +37,7 @@ class PostsController extends Controller
 
 
 //refers to the route folder and then the blade file name before .blade.php , compact creates the necessary array for the $tasks variable
-return view('posts.show', compact('post'));
+return view('posts.show');
 
 }
 }
