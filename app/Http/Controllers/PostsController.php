@@ -11,7 +11,7 @@ class PostsController extends Controller
 {
     //
 
-    public function index(Post posts)
+    public function index()
     {
 
     	$posts = Post::all(); 
