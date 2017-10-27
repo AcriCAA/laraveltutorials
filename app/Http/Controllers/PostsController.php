@@ -19,7 +19,7 @@ class PostsController extends Controller
 
 
 
- public function show(Post $post){ // by putting Post $post in here and matching it to the wildcard {$task in routes} (Route::get('/tasks/{task}', 'TasksController@show');), Laravel is automatically running Task::find($id) or whatever wildcard 
+ public function show(){ // by putting Post $post in here and matching it to the wildcard {$task in routes} (Route::get('/tasks/{task}', 'TasksController@show');), Laravel is automatically running Task::find($id) or whatever wildcard 
 
 
 	//db call to find a row by id, returns the entire record as object
