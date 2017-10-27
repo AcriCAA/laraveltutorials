@@ -3,8 +3,15 @@
 
 @section('content')
 
-<h1>Publish a Post</h1>
 
+
+      <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+        	<h1>Publish a Post</h1>
 
 <form method="POST" action="/posts">
 {{-- include csrf field in all of our forms for authentication --}}
@@ -17,11 +24,16 @@
 
   <div class="form-group">
     <label for="body">Body</label>
-    <input type="text" class="form-control" id="body" nam="body">
+    <textarea type="text" class="form-control" id="body" name="body"></textarea>
   </div>
 
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+</div> {{-- container --}}
+
+</div> {{-- col --}}
+</div> {{-- row --}}
 
 @endsection 
