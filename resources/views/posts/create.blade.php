@@ -13,7 +13,7 @@
 
         	<h1>Publish a Post</h1>
 
-@include('layouts.partials.errors');
+@include('layouts.partials.errors')
 
 <div class="form-group">
 <form method="POST" action="/posts">
@@ -29,7 +29,7 @@
     <label for="body">Body</label>
     <textarea type="text" class="form-control" id="body" name="body" required ></textarea>
   </div>
-  
+
 </div>
 
 <div class="form-group">
