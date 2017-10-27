@@ -14,7 +14,7 @@ class PostsController extends Controller
     public function index()
     {
 
-    	// latest()->get() orders them in descending order 
+    	// latest()->get() orders them in descending order
     	$posts = Post::latest()->get(); 
     	return view('posts.index', compact('posts')); 
     }
