@@ -3,7 +3,12 @@
 @section('content')
 
 <div class="container">
-<h1>A place to show the posts</h1>
+
+<div class="row">
+<div class="col-md-8">
+		@include('posts.post')
+</div>
+</div>
 </div>
 
 @endsection
