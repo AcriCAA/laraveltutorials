@@ -11,13 +11,13 @@
 	{{ csrf_field() }}
   <div class="form-group">
     <label for="title">Title: </label>
-    <input type="email" class="form-control" id="title" name="title">
+    <input type="text" class="form-control" id="title" name="title">
   </div>
 
 
   <div class="form-group">
-    <label for="body">Password</label>
-    <input type="password" class="form-control" id="body" nam="body">
+    <label for="body">Body</label>
+    <input type="text" class="form-control" id="body" nam="body">
   </div>
 
 
