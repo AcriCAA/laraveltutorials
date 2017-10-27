@@ -35,7 +35,7 @@ class PostsController extends Controller
 
 	public function store(){
 
-		dd(request->all()); 
+		dd(request()->all()); 
 		//Create a new post using the request data
 
 		// Save it to the database
