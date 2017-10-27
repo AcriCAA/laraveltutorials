@@ -13,23 +13,9 @@
 
         	<h1>Publish a Post</h1>
 
+@include('layouts.partials.errors');
 
-@if(count($errors))
-
-<div class="row">
-	<div class="col-sm-12 alert-danger">
-
-		<ul>
-			@foreach($errors->all() as $error)
-				<li>{{$error}}</li>
-			@endforeach
-		</ul>
-
-	</div>
-</div>
-
-@endif
-
+<div class="form-group">
 <form method="POST" action="/posts">
 {{-- include csrf field in all of our forms for authentication --}}
 	{{ csrf_field() }}
@@ -43,9 +29,13 @@
     <label for="body">Body</label>
     <textarea type="text" class="form-control" id="body" name="body" required ></textarea>
   </div>
+  
+</div>
 
+<div class="form-group">
 
   <button type="submit" class="btn btn-primary">Submit</button>
+</div>
 </form>
 
 </div> {{-- container --}}
