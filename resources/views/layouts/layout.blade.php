@@ -23,7 +23,7 @@
      
 @include('layouts.partials.nav')
 
-@yield('home-content')
+@yield('content')
 
 @include('layouts.partials.footer')
 

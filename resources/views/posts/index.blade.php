@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 
-@section('home-content')
+@section('content')
 
 
     <main role="main">

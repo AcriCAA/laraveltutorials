@@ -24,6 +24,9 @@ Route::get('/tasks/{task}', 'TasksController@show');
 
 Route::get('/', 'PostsController@index'); 
 
+Route::get('/posts/', 'PostsController@show'); 
+
+
 
 
 // this is setting the url from urlroot/
