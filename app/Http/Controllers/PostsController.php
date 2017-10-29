@@ -30,6 +30,12 @@ class PostsController extends Controller
 
 	}
 
+	public function test(){
+
+		return view('posts.create');
+
+	}
+
     public function create()
     {
     	return view('posts.create');

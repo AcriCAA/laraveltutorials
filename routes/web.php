@@ -24,13 +24,13 @@ Route::get('/tasks/{task}', 'TasksController@show');
 
 Route::get('/', 'PostsController@index'); 
 
-Route::get('/posts/test', 'PostsController@index'); 
+Route::get('/posts/create', 'PostsController@test'); 
 
 Route::get('/posts/{post}', 'PostsController@show'); 
 
 Route::post('/posts', 'PostsController@store'); 
 
-Route::get('posts/create', 'PostsController@create');
+// Route::get('posts/create', 'PostsController@create');
 
 
 
