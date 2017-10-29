@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.master')
 
 
 @section('content')
@@ -17,8 +17,11 @@
 
 <div class="form-group">
 <form method="POST" action="/posts">
+
 {{-- include csrf field in all of our forms for authentication --}}
-	{{ csrf_field() }}
+	 {{ csrf_field() }}
+
+
   <div class="form-group">
     <label for="title">Title: </label>
     <input type="text" class="form-control" id="title" name="title" required >

@@ -32,7 +32,7 @@ class PostsController extends Controller
 
     public function create()
     {
-    	return view('posts.archive');
+    	return view('posts.create');
     }
 
 	public function store()
