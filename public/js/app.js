@@ -42742,7 +42742,7 @@ if (false) {
 /* 42 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n  color: $primary-color\n ^\n      Invalid CSS after \"  color\": expected \"}\", was \": $primary-color\"\n      in /srv/users/serverpilot/apps/laraveltutorials/resources/assets/sass/app.scss (line 16, column 3)\n    at runLoaders (/srv/users/serverpilot/apps/laraveltutorials/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /srv/users/serverpilot/apps/laraveltutorials/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /srv/users/serverpilot/apps/laraveltutorials/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/srv/users/serverpilot/apps/laraveltutorials/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/srv/users/serverpilot/apps/laraveltutorials/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/srv/users/serverpilot/apps/laraveltutorials/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/srv/users/serverpilot/apps/laraveltutorials/node_modules/async/dist/async.js:906:16)\n    at options.error (/srv/users/serverpilot/apps/laraveltutorials/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
