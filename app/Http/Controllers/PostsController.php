@@ -30,16 +30,11 @@ class PostsController extends Controller
 
 	}
 
-	public function test(){
+	public function create2(){
 
 		return view('posts.create');
 
 	}
-
-    public function create()
-    {
-    	return view('posts.create');
-    }
 
 	public function store()
 
