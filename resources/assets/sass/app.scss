@@ -7,11 +7,9 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+body {
+	
 
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+	background: blue;
 
-.custom{
-  font: 100% $font-stack
-  color: $primary-color
 }
