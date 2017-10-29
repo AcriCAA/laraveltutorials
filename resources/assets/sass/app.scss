@@ -1,4 +1,3 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
@@ -9,9 +8,10 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 
-$font-stack:    Helvetica, sans-serif
-$primary-color: #333
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
 
-.custom
+.custom{
   font: 100% $font-stack
   color: $primary-color
+}
