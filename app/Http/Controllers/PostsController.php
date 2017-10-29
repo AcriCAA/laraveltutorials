@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
+
 
 use Illuminate\Http\Request;
 
-use App\Post;
+
 
 class PostsController extends Controller
 {
@@ -28,11 +30,10 @@ class PostsController extends Controller
 
 	}
 
-	public function create(){
-
-		return view ('posts.index'); 
-	}
-
+    public function create()
+    {
+    	return view('posts.archive');
+    }
 
 	public function store()
 
