@@ -1,29 +1,59 @@
  <div class="blog-post">
-            
-        <a href="/posts/{{$post->id}}">
 
-            <h2 class="blog-post-title">{{$post->title}}</h2>
-        </a>
-            {{-- The date string is using the Carbon library that is built in Laravel --}}
-            <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}}<a href="#">Mark</a></p>
+ 	<a href="/posts/{{$post->id}}">
 
-            <p>{{$post->body}}</p>
+ 		<h2 class="blog-post-title">{{$post->title}}</h2>
+ 	</a>
+ 	{{-- The date string is using the Carbon library that is built in Laravel --}}
+ 	<p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}}<a href="#">Mark</a></p>
 
-            <hr> 
+ 	<p>{{$post->body}}</p>
 
-            <div class="comments">
-            	<ul class="list-group">
-            		@foreach ($post->comments as $comment)
+ 	<hr> 
 
-            		<strong>{{$comment->created_at->diffForHumans()}}</strong>
+ 	<div class="comments">
+ 		<ul class="list-group">
+ 			@foreach ($post->comments as $comment)
 
-            		<li class="list-group-item">{{$comment->body}}</li>
+ 			<strong>{{$comment->created_at->diffForHumans()}}</strong>
 
-            		@endforeach
-            	</ul>
-            </div>
+ 			<li class="list-group-item">{{$comment->body}}</li>
+
+ 			@endforeach
+ 		</ul>
+ 	</div>
+
+ 	{{-- add a comment --}}
 
 
-          </div><!-- /.blog-post -->
+ 	<div class="card">
 
-         
+ 		<form method="POST" action="/posts/{{$post->id}}/comments}}"> 
+
+ 			<div class="card-block">
+ 				<div class="form-group">
+
+ 					<textarea name="body" placeholder="Your Comment Here" class="form-control"></textarea>
+
+ 				</div>
+
+ 				<div class="form-group">
+
+ 					<textarea name="body" placeholder="Your Comment Here" class="form-control"></textarea>
+
+ 				</div>
+
+ 				<div class="form-group">
+
+ 					<button type="submit" class="btn btn-primary">Submit</button>
+ 				</div>
+
+ 			</div>
+
+ 			</div>
+
+ 		</div>
+
+
+ 	</div><!-- /.blog-post -->
+
