@@ -9,6 +9,20 @@
 
             <p>{{$post->body}}</p>
 
+            <hr> 
+
+            <div class="comments">
+            	<ul class="list-group">
+            		@foreach ($post->comments as $comment)
+
+            		<strong>{{$comment->created_at->diffForHumans()}}</strong>
+
+            		<li class="list-group-item">{{$comment}}</li>
+
+            		@endforeach
+            	</ul>
+            </div>
+
 
           </div><!-- /.blog-post -->
 
