@@ -17,7 +17,7 @@
 
             		<strong>{{$comment->created_at->diffForHumans()}}</strong>
 
-            		<li class="list-group-item">{{$comment}}</li>
+            		<li class="list-group-item">{{$comment->body}}</li>
 
             		@endforeach
             	</ul>
