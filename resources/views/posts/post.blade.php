@@ -28,7 +28,8 @@
 
  	<div class="card">
 
- 		<form method="POST" action="/posts/{{ $post->id }}/comments}}"> 
+		{{-- <form action="/posts/{{ $post->id }}/create" method="POST"> --}}
+ 		<form action="/posts/{{ $post->id }}/comments" method="POST""> 
 
  			{{ csrf_field() }}
 
