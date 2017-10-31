@@ -30,6 +30,8 @@
 
  		<form method="POST" action="/posts/{{$post->id}}/comments}}"> 
 
+ 			{{ csrf_field() }}
+ 			
  			<div class="card-block">
  				<div class="form-group">
 
