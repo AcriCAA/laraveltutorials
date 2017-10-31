@@ -38,6 +38,8 @@ class PostsController extends Controller
 
 	public function addComment($body){
 
+		
+		
 		// this is the equivalent 
 		$this->comments()->create(compact('body'));
 
