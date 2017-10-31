@@ -31,7 +31,7 @@
  		<form method="POST" action="/posts/{{$post->id}}/comments}}"> 
 
  			{{ csrf_field() }}
- 			
+
  			<div class="card-block">
  				<div class="form-group">
 
@@ -39,11 +39,7 @@
 
  				</div>
 
- 				<div class="form-group">
-
- 					<textarea name="body" placeholder="Your Comment Here" class="form-control"></textarea>
-
- 				</div>
+ 	
 
  				<div class="form-group">
 

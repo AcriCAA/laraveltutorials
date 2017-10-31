@@ -36,6 +36,22 @@ class PostsController extends Controller
 
 	}
 
+	public function addComment($body){
+
+		// this is the equivalent 
+		$this->comments()->create(compact('body'));
+
+		//of this
+
+		  // Comment::create([
+    //         'body' => request('body'), 
+    //         'post_id' => this->id
+    //     ]);
+
+
+
+	}
+
 	public function store()
 
 	{
