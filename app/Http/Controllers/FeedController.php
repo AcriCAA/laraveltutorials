@@ -14,7 +14,7 @@ class FeedController extends Controller
         $client = new Client([
 
         	'base_uri' => 'https://backend.theedge.ai/api/v2/links/', 
-        	'timeout' => 2.0, 
+        
 
         ]);
 
