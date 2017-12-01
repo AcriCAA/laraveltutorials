@@ -13,13 +13,13 @@ class FeedController extends Controller
     {
         $client = new Client([
 
-        	'base_uri' => 'https://backend.theedge.ai/api/v2/links/search?query=', 
+        	'base_uri' => 'https://backend.theedge.ai/api/v2/links/', 
         	'timeout' => 2.0, 
 
         ]);
 
 
-       $response = $client->request('GET', 'driverless');
+       $response = $client->request('GET', 'search?query=driverless');
 
 
 
