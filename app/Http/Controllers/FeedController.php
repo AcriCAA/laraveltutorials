@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use GuzzleHttp\Client;
+
 class FeedController extends Controller
 {
     //
@@ -29,7 +31,7 @@ class FeedController extends Controller
         //     ]
         // ]);
 
-        $result= $response->getBody();
+        $result = $response->getBody();
         dd($result);
 
 	}
