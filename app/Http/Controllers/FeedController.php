@@ -31,8 +31,8 @@ class FeedController extends Controller
         //     ]
         // ]);
 
-        $result = $response->getBody();
-        dd($result);
+       
+        dd($response);
 
 	}
 
