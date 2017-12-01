@@ -35,7 +35,9 @@ class FeedController extends Controller
 		// $response = $client->put('http://httpbin.org/put');
        
        	$result = json_decode($response->getBody()->getContents());
-        var_dump($result);
+
+       	return $result; 
+        
 
 	}
 
