@@ -34,8 +34,8 @@ class FeedController extends Controller
 		// $response = $client->post('http://httpbin.org/post');
 		// $response = $client->put('http://httpbin.org/put');
        
-       	$res = $result->getBody(); 
-        var_dump($res);
+       	$result = $response->getBody(); 
+        var_dump($result);
 
 	}
 
