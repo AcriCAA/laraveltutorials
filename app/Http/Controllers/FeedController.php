@@ -11,7 +11,7 @@ class FeedController extends Controller
     //
 	public function saveApiData()
     {
-        $client = new GuzzleHttp\Client([
+        $client = new Client([
 
         	'base_uri' => 'https://backend.theedge.ai/api/v2/links/', 
         
