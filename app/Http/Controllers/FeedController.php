@@ -11,12 +11,7 @@ class FeedController extends Controller
     //
 	public function saveApiData()
     {
-        $client = new Client([
-
-        	'base_uri' => 'https://backend.theedge.ai/api/v2/links/', 
-        
-
-        ]);
+        $client = new Client();
 
 
        // $response = $client->request('GET', 'search?query=driverless');
