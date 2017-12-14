@@ -9,7 +9,7 @@
       <div class="row">
 
         <div class="col-sm-12">
-        @foreach($articles as $article)
+        @foreach($articles['data'] as $article)
          {{$article}}
         @endforeach
 
