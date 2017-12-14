@@ -62,7 +62,7 @@ class FeedController extends Controller
 	public function show(){ 
 
 		// $articles = FeedController::saveApiData(); 
-saveApiData(); 
+FeedController::saveApiData(); 
   //   $articles = {1,2,3,4}
 
 		// return view('feeds.feedhome', compact('articles'));
