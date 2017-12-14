@@ -36,9 +36,11 @@ class FeedController extends Controller
 
        $data = $response->getBody()->getContents();
        
-        $result = json_decode($data, true);
+        // $result = json_decode($data, true);
 
-        return $result; 
+        // return $result; 
+
+       return $data; 
         
 
   }
