@@ -41,11 +41,31 @@ class FeedController extends Controller
 
   }
 
+
+  //   public function index()
+  //   {
+
+  //     // latest()->get() orders them in descending order
+  //     $posts = Post::latest()->get(); 
+  //     return view('posts.index', compact('posts')); 
+  //   }
+
+
+
+  // public function show(Post $post){ 
+
+
+  //   return view('posts.show', compact('post'));
+
+  // }
+
 	public function show(){ 
 
-		$articles = FeedController::saveApiData(); 
+		// $articles = FeedController::saveApiData(); 
+saveApiData(); 
+  //   $articles = {1,2,3,4}
 
-		return view('feeds.feedhome', compact('articles'));
+		// return view('feeds.feedhome', compact('articles'));
 
 	}
 
