@@ -11,7 +11,7 @@
         <div class="col-sm-12">
 
 
-        @foreach($posts as $post)
+        @foreach($articles as $article)
          @include('posts.post')
         @endforeach
 
