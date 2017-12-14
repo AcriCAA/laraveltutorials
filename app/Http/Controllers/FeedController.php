@@ -66,13 +66,13 @@ class FeedController extends Controller
 	public function show(){ 
 
 		// $articles = FeedController::saveApiData(); 
-$articles = FeedController::saveApiData(); 
+// $articles = FeedController::saveApiData(); 
 
-echo is_array($articles) ? 'Array' : 'not an Array';
+// echo is_array($articles) ? 'Array' : 'not an Array';
   //   $articles = {1,2,3,4}
 // var_dump($articles);
 // return view('feeds.feedhome', compact('articles'));
-return view('feeds.feedhome', compact($articles));
+return view('feeds.feedhome', FeedController::saveApiData());
 
 	}
 
