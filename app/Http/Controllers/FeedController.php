@@ -42,5 +42,14 @@ class FeedController extends Controller
 	}
 
 
+	public function show(){ 
+
+		$articles = saveApiData(); 
+
+		echo view('feeds.feedhome', compact('articles'));
+
+	}
+
+
 
 }
