@@ -10,7 +10,7 @@
 
         <div class="col-sm-12">
         @foreach($articles['data'] as $article)
-         {{$article}}
+         {{$article['attributes']['title']}}
         @endforeach
 
           <nav class="blog-pagination">
