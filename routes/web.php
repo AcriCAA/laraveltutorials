@@ -33,7 +33,7 @@ Route::post('/posts/{post}/comments', 'CommentsController@store');
 Route::get('/register', 'RegistrationController@create');
 Route::get('/login', 'SessionController@create');
 
-Route::get('/feed', 'FeedController@show');
+Route::get('/feed', 'FeedController@saveApiData');
 
 // Route::get('posts/create', 'PostsController@create');
 
