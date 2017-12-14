@@ -33,8 +33,10 @@ class FeedController extends Controller
     // $response = $client->patch('http://httpbin.org/patch');
     // $response = $client->post('http://httpbin.org/post');
     // $response = $client->put('http://httpbin.org/put');
+
+       $data = $response->getBody()->getContents();
        
-        $result = json_decode($response->getBody()->getContents());
+        $result = json_decode($json_encode($data), true);
 
         return $result; 
         
