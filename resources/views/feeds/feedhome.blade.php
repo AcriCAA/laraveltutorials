@@ -12,7 +12,7 @@
 
 
         @foreach($articles as $article)
-         @include('posts.post')
+         {{$article}}
         @endforeach
 
           <nav class="blog-pagination">
