@@ -36,7 +36,7 @@ class FeedController extends Controller
        
         $result = json_decode($response->getBody()->getContents());
 
-        var_dump($result); 
+        return $result; 
         
 
   }
@@ -62,9 +62,9 @@ class FeedController extends Controller
 	public function show(){ 
 
 		// $articles = FeedController::saveApiData(); 
-FeedController::saveApiData(); 
+$articles = FeedController::saveApiData(); 
   //   $articles = {1,2,3,4}
-
+var_dump($articles);
 		// return view('feeds.feedhome', compact('articles'));
 
 	}
