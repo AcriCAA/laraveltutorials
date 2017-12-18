@@ -35,4 +35,13 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+
+    'google_directions' => [
+
+    
+    'apikey' => env('API_KEY'),
+    
+ 
+    ],
+
 ];

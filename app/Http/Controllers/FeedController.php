@@ -76,6 +76,31 @@ return view('feeds.feedhome', ['articles' => $articles]);
 
 	}
 
+  public function directions(){
+
+    $key = config('services.google_directions.apikey');
+
+    $url = 'https://maps.googleapis.com/maps/api/directions/json?origin=Brooklyn&destination=Queens&mode=transit&key=YOUR_API_KEY'.$key; 
+
+
+       $response = $client->get($url);
+    // $response = $client->delete('http://httpbin.org/delete');
+    // $response = $client->head('http://httpbin.org/get');
+    // $response = $client->options('http://httpbin.org/get');
+    // $response = $client->patch('http://httpbin.org/patch');
+    // $response = $client->post('http://httpbin.org/post');
+    // $response = $client->put('http://httpbin.org/put');
+
+       $data = $response->getBody()->getContents();
+       
+        $result = json_decode($data, true);
+
+        echo '<pre>';
+        var_dump($data);
+        echo '</pre>';
+
+  }
+
 
 
 }
