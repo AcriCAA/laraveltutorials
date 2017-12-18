@@ -8,7 +8,7 @@
 
        
         @foreach($articles['data'] as $article)
-            <div class="row">
+            <div class="row area-start">
               <div class="col-sm-12 pad-30 blue-bg">
              <h2>{{$article['attributes']['title']}}</h2>
               <p>{{$article['attributes']['description']}}</p>
