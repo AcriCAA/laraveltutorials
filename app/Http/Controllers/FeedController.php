@@ -82,7 +82,7 @@ return view('feeds.feedhome', ['articles' => $articles]);
 
     $key = config('services.google_directions.apikey');
 
-    $url = 'https://maps.googleapis.com/maps/api/directions/json?origin=Brooklyn&destination=Queens&mode=transit&key=YOUR_API_KEY'.$key; 
+    $url = 'https://maps.googleapis.com/maps/api/directions/json?origin=Brooklyn&destination=Queens&mode=transit&key='.$key; 
 
 
        $response = $client->get($url);
