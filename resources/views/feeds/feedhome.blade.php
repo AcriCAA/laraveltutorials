@@ -14,7 +14,7 @@
           <div class="col-sm-12">
          <h2>{{$article['attributes']['title']}}</h2>
           <p>{{$article['attributes']['description']}}</p>
-  <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>';
+  <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
   
 
 
