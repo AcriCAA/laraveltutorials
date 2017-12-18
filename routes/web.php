@@ -35,6 +35,8 @@ Route::get('/login', 'SessionController@create');
 
 Route::get('/feed', 'FeedController@show');
 
+Route::get('/directions', 'FeedController@directions');
+
 // Route::get('posts/create', 'PostsController@create');
 
 
