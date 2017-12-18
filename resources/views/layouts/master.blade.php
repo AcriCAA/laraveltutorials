@@ -20,9 +20,9 @@
   <body>
 
     
-@include('layouts.partials.nav')
-@yield('content')
-@include('layouts.partials.footer')
+
+      @yield('content')
+
 
 
   </body>
