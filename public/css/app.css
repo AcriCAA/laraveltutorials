@@ -8350,8 +8350,8 @@ button.close {
   }
 }
 
-body {
-  background: red;
+.area-start {
+  margin-top: 10px;
 }
 
 .min-height-box {
@@ -8404,5 +8404,46 @@ body {
 
 .marg-5 {
   margin: 5px;
+}
+
+.gray-text {
+  color: #e0e0e0;
+}
+
+.orange-bg {
+  background-color: #fdce4e;
+}
+
+.blue-bg {
+  background-color: #17cbff;
+  color: white;
+}
+
+.turquoise-bg {
+  background-color: #99ffff;
+}
+
+.purple-bg {
+  background-color: #8580e1;
+}
+
+.fuscia-bg {
+  background-color: #f9aaf4;
+}
+
+.purple-neon-bg {
+  background-color: #c63bbe;
+}
+
+.purple-neon-lt-bg {
+  background-color: #fc4bf2;
+}
+
+.yellow-lt {
+  background-color: #f8ff46;
+}
+
+.purple-violet {
+  background-color: #8905ff;
 }
 
