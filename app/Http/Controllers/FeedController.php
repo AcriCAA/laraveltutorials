@@ -101,6 +101,10 @@ return view('feeds.feedhome', ['articles' => $articles]);
         var_dump($data);
         echo '</pre>';
 
+        echo '<pre>';
+        var_dump($result);
+        echo '</pre>';
+
   }
 
 
