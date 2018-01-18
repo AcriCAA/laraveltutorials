@@ -44,4 +44,11 @@ return [
  
     ],
 
+    'twilio' => [
+        'accountID' => env('ACCOUNT_SID'),
+        
+        'token' => env('AUTH_TOKEN'),
+
+    ],
+
 ];
