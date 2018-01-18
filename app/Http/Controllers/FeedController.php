@@ -63,7 +63,7 @@ class FeedController extends Controller
 
   // }
 
-	public function show(){ 
+public function show(){ 
 
 		// $articles = FeedController::saveApiData(); 
 $articles = FeedController::saveApiData(); 
