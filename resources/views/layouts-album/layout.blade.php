@@ -21,11 +21,11 @@
 
 
      
-@include('layouts.partials.nav')
+@include('layouts-album.partials.nav')
 
 @yield('content')
 
-@include('layouts.partials.footer')
+@include('layouts-album.partials.footer')
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
