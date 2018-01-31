@@ -74,7 +74,7 @@ $articles = FeedController::saveApiData();
 // return view('feeds.feedhome', compact('articles'));
 
 
-return view('posts-album.index', ['articles' => $articles]);
+return view('layouts-album.layout', ['articles' => $articles]);
 
 	}
 
