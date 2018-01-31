@@ -8,15 +8,17 @@
 
         @foreach($articles['data'] as $article)
 
+        {{var_dump($loop->index)}}
+        {{$column_calculation = $loop->index % 3}}
 
-        @if (($loop->index % 3) === $column_divisor)
+        @if ($column_calculation === $column_divisor)
         	<div class="row">
 
         @endif
 
-        @if(($loop->index % 3) === 0)
+        
+        @if($column_calculation === 0)
      
-                   
               <div class="card">
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                  <h2>{{$article['attributes']['title']}}</h2>
