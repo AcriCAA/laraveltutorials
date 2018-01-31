@@ -1,5 +1,6 @@
 
-{{$column_divisor = 1%3}}
+
+<?php $column_divisor = 1%3; ?>
 
         <div class="album text-muted">
         <div class="container">
@@ -8,7 +9,7 @@
         @foreach($articles['data'] as $article)
 
         {{-- {{var_dump($loop->index)}} --}}
-        {{$column_calculation = $loop->index % 3}}
+        <?php $column_calculation = $loop->index % 3 ?>
 
         @if ($column_calculation === $column_divisor)
         	<div class="row">
