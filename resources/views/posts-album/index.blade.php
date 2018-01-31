@@ -19,7 +19,7 @@
 
       <div class="album text-muted">
         <div class="container">
-          
+          HELLO? 
             @include('posts-album.show')
 
         </div>
