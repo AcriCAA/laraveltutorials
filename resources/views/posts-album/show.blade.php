@@ -9,7 +9,11 @@
         @foreach($articles['data'] as $article)
 
         {{-- {{var_dump($loop->index)}} --}}
-        <?php $column_calculation = $loop->index % 3 ?>
+        <?php 
+        $column_count = $loop->index + 1
+        $column_calculation = $loop->index % 3 
+
+        ?>
 
         @if($loop->index == 0)
 
