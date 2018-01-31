@@ -26,7 +26,7 @@ var_dump($column_calculation);
 
         {{-- first column --}}
 
-        @if ($loop->index > 0 && $column_calculation === $column_divisor)
+        @if ($column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
