@@ -18,6 +18,8 @@ var_dump($column_divisor); ?>
         $column_calculation = $fraction;
 var_dump($column_calculation);
 
+		$odd_calculation = $column_count % 3; 
+
         ?>
 
         @if($loop->index == 0)
@@ -30,6 +32,7 @@ var_dump($column_calculation);
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
             </div>
 
+        {{-- first column --}}
 
         @elseif ($loop->index > 0 && $column_calculation === $column_divisor)
         	<div class="row">
@@ -41,8 +44,8 @@ var_dump($column_calculation);
             </div>
         
 
-        
-        @elseif($loop->index != 0 && $column_calculation === 0)
+        {{-- last third column --}}
+        @elseif($loop->index != 0 && $odd_calculation === 0)
      
               <div class="card">
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
@@ -52,7 +55,8 @@ var_dump($column_calculation);
             </div>
         </div> {{-- close the row --}}    
         
-        @elseif($loop->index != 0 && $column_calculation > 0)
+        {{-- middle column --}}
+        @else
           <div class="card">
                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                <h2>{{$article['attributes']['title']}}</h2>
