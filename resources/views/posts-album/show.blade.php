@@ -5,6 +5,7 @@
 
         <div class="album text-muted">
         <div class="container">
+        <div class="row">
 
         @foreach($articles['data'] as $article)
 
@@ -13,11 +14,10 @@
 
         @if ($column_calculation === $column_divisor)
         	<div class="row">
-
         @endif
 
         
-        @if($column_calculation === 0)
+        @if($loop->index != 0 && $column_calculation === 0)
      
               <div class="card">
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
