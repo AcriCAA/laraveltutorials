@@ -1,4 +1,4 @@
-@extends('posts-album.layout')
+@extends('albummaster')
 
 
 @section('content')
@@ -19,7 +19,7 @@
 
       <div class="album text-muted">
         <div class="container">
-          HELLO? 
+        
             @include('posts-album.show')
 
         </div>

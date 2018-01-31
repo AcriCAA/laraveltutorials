@@ -23,9 +23,8 @@
      
 @include('posts-album.partials.nav')
 
-THIS ONE? 
 
-@include('posts-album.index')
+@yield('content')
 
 @include('posts-album.partials.footer')
 
