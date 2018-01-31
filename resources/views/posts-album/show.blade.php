@@ -1,4 +1,4 @@
-@extends('layouts.master')
+
 @section('content')
 
 {{$column_divisor = 1%3}}
