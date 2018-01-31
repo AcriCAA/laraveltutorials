@@ -22,7 +22,7 @@
             </div>
 
 
-        @elseif ($column_calculation === $column_divisor)
+        @elseif ($loop->index > 0 && $column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
