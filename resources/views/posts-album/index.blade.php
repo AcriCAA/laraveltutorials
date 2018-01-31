@@ -20,7 +20,7 @@
       <div class="album text-muted">
         <div class="container">
           
-            @include('posts-album.show')
+            @yield('posts-album.show')
 
         </div>
       </div>
