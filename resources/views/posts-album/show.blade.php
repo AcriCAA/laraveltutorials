@@ -1,7 +1,6 @@
 
 
-<?php $column_divisor = 1/3;
-	var_dump(4%3); ?>
+<?php $column_divisor = 1/3; ?>
 
         <div class="album text-muted">
         <div class="container">
@@ -12,7 +11,10 @@
         {{-- {{var_dump($loop->index)}} --}}
         <?php 
         $column_count = $loop->index + 1;
-        $column_calculation = $loop->index % 3;
+        $n = $loop->index / 3; 
+		$whole = floor($n);      
+		$fraction = $n - $whole; 
+        $column_calculation = $fraction;
 
         ?>
 
