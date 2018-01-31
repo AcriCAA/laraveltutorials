@@ -1,6 +1,4 @@
 
-@section('content')
-
 {{$column_divisor = 1%3}}
 
         <div class="album text-muted">
@@ -48,6 +46,4 @@
 	</div> {{-- container --}}
 
     
-
-@endsection
 
