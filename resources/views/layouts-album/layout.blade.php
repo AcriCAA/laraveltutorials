@@ -23,7 +23,7 @@
      
 @include('layouts-album.partials.nav')
 
-@include('posts-album.index')
+@yield('content')
 
 @include('layouts-album.partials.footer')
 
