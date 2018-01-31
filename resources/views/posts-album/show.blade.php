@@ -3,7 +3,7 @@
 
 @section('content')
 
-{{$column_divisor = 1%3}}
+{{$column_divisor = 1%3;}}
 
         <div class="album text-muted">
         <div class="container">
@@ -13,11 +13,12 @@
         @foreach($articles['data'] as $article)
 
 
-        @if($loop->index % 3 = $column_divisor)
+        @if (($loop->index % 3) === $column_divisor)
         	<div class="row">
+
         @endif
 
-        @if($loop->index % 3 == 0)
+        @if(($loop->index % 3) === 0)
      
                    
               <div class="card">
