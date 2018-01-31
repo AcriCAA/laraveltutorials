@@ -1,7 +1,7 @@
 
 
-<?php $column_divisor = 1%3;
-	var_dump($column_divisor); ?>
+<?php $column_divisor = 1/3;
+	var_dump(4/3); ?>
 
         <div class="album text-muted">
         <div class="container">
