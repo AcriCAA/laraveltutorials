@@ -72,7 +72,7 @@ $articles = FeedController::saveApiData();
   //   $articles = {1,2,3,4}
 // var_dump($articles);
 // return view('feeds.feedhome', compact('articles'));
-return view('feeds.feedhome', ['articles' => $articles]);
+return view('posts-album.index', ['articles' => $articles]);
 
 	}
 
