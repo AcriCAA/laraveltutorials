@@ -47,7 +47,7 @@
             </div>
         </div> {{-- close the row --}}    
         
-        @else
+        @elseif($loop->index != 0 && $column_calculation > 0)
           <div class="card">
                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                <h2>{{$article['attributes']['title']}}</h2>
