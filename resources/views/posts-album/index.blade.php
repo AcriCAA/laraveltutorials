@@ -1,4 +1,4 @@
-@extends('layouts-album.layout')
+@extends('posts-album.layout')
 
 
 @section('content')
