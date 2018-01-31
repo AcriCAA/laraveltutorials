@@ -11,6 +11,9 @@
         {{-- {{var_dump($loop->index)}} --}}
         <?php $column_calculation = $loop->index % 3 ?>
 
+        {{$loop->index}}
+
+
         @if ($column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
