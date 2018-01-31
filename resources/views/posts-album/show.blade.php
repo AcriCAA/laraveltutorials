@@ -1,14 +1,10 @@
 @extends('layouts.master')
-
-
 @section('content')
 
-{{$column_divisor = 1%3;}}
+{{$column_divisor = 1%3}}
 
         <div class="album text-muted">
         <div class="container">
-
-       
 
         @foreach($articles['data'] as $article)
 
