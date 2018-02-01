@@ -30,7 +30,7 @@
 
         @if ($column_calculation === $column_divisor)
         	<div class="row">
-        		<div class="card">
+        		<div class="card box-shadow">
                 <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
@@ -42,7 +42,7 @@
         
         {{-- middle column --}}
         @elseif($odd_calculation != 0)
-          <div class="card">
+          <div class="card box-shadow">
           		
       
               <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
@@ -54,7 +54,7 @@
         {{-- last third column --}}
         @elseif($odd_calculation === 0)
      			
-              <div class="card">
+              <div class="card box-shadow">
               	
          			<img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                 
