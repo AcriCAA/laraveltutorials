@@ -32,7 +32,7 @@
         	<div class="row">
         		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         	
-        		<div class="mr-5 ml-5" style="border: 2px solid black;">
+        		<div class="mr-2 ml-2 p-3" style="border: 2px solid rgb(134, 142, 150);">
                 <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
@@ -47,7 +47,7 @@
           
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
           
-        	<div class="mr-5 ml-5" style="border: 2px solid black;">
+        	<div class="mr-2 ml-2 p-3" style="border: 2px solid rgb(134, 142, 150);">
               <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                <h2>{{$article['attributes']['title']}}</h2>
                 <p class="card-text">{{$article['attributes']['description']}}</p>
@@ -59,7 +59,7 @@
         @elseif($odd_calculation === 0)
      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
               
-              	<div class="mr-5 ml-5" style="border: 2px solid black;">
+              	<div class="mr-2 ml-2 p-3" style="border: 2px solid rgb(134, 142, 150);">
          			<img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                 
                  <h2>{{$article['attributes']['title']}}</h2>
