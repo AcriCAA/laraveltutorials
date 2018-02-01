@@ -29,9 +29,7 @@
         @if ($column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
-        			Case 1
-        			<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
-                 <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+                 <img data-src="{{$article['thumbnail']}}" alt="Card image cap">
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
@@ -43,9 +41,9 @@
         {{-- middle column --}}
         @elseif($odd_calculation != 0)
           <div class="card">
-          		Case 2 middle column
-          		<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
-               <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+          		
+      
+               <img data-src="{{$article['thumbnail']}}" alt="Card image cap">
                <h2>{{$article['attributes']['title']}}</h2>
                 <p class="card-text">{{$article['attributes']['description']}}</p>
                 <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
@@ -55,9 +53,9 @@
         @elseif($odd_calculation === 0)
      			
               <div class="card">
-              	Case 3 last column
-              	<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
-                 <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+              	
+         
+                 <img data-src="{{$article['thumbnail']}}" alt="Card image cap">
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
