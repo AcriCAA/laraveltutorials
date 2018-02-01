@@ -50,7 +50,7 @@ var_dump($column_calculation);
         </div> {{-- close the row --}}    
         
         {{-- middle column --}}
-        @else
+        @elseif($odd_calculation != 0)
           <div class="card">
           		Case 3 middle column
                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
