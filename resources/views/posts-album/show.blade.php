@@ -16,7 +16,7 @@ var_dump($column_divisor); ?>
 		$whole = floor($n);      
 		$fraction = $n - $whole; 
         $column_calculation = $fraction;
-var_dump($column_calculation);
+
 
 		$odd_calculation = $column_count % 3; 
 		
@@ -38,11 +38,24 @@ var_dump($column_calculation);
             	</div>
         
 
+        
+        
+        {{-- middle column --}}
+        @elseif($odd_calculation != 0)
+          <div class="card">
+          		Case 2 middle column
+          		<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
+               <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+               <h2>{{$article['attributes']['title']}}</h2>
+                <p class="card-text">{{$article['attributes']['description']}}</p>
+                <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
+            </div>
+
         {{-- last third column --}}
-        @elseif($loop->index != 0 && $odd_calculation === 0)
+        @elseif($odd_calculation === 0)
      			
               <div class="card">
-              	Case 2 last column
+              	Case 3 last column
               	<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                  <h2>{{$article['attributes']['title']}}</h2>
@@ -50,17 +63,6 @@ var_dump($column_calculation);
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
             </div>
         </div> {{-- close the row --}}    
-        
-        {{-- middle column --}}
-        @elseif($odd_calculation != 0)
-          <div class="card">
-          		Case 3 middle column
-          		<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
-               <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-               <h2>{{$article['attributes']['title']}}</h2>
-                <p class="card-text">{{$article['attributes']['description']}}</p>
-                <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
-            </div>
         @endif
         @endforeach
 
