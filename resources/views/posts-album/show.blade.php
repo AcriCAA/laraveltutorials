@@ -29,6 +29,7 @@ var_dump($column_calculation);
         @if ($column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
+        			Case 1
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
@@ -38,8 +39,9 @@ var_dump($column_calculation);
 
         {{-- last third column --}}
         @elseif($loop->index != 0 && $odd_calculation === 0)
-     
+     			
               <div class="card">
+              	Case 2 last column
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
@@ -50,6 +52,7 @@ var_dump($column_calculation);
         {{-- middle column --}}
         @else
           <div class="card">
+          		Case 3 middle column
                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                <h2>{{$article['attributes']['title']}}</h2>
                 <p class="card-text">{{$article['attributes']['description']}}</p>
