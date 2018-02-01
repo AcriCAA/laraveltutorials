@@ -28,7 +28,7 @@ var_dump($column_divisor); ?>
 
         {{-- first column --}}
 
-        @if ($column_calculation >= $column_divisor && $column_calculation < $second_column_divisor )
+        @if ($column_calculation >= $column_divisor && $column_calculation <= $second_column_divisor )
         	<div class="row">
         		<div class="card">
         			Case 1
