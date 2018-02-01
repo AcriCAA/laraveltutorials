@@ -34,7 +34,7 @@
                 <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
-                  <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
+                  <p class="text-center"><button class="btn btn-primary"><a href="{{URL::to($article['attributes']['url'])}}">READ MORE</a></button></p>
             	</div>
         
 
@@ -48,7 +48,7 @@
               <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                <h2>{{$article['attributes']['title']}}</h2>
                 <p class="card-text">{{$article['attributes']['description']}}</p>
-                <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
+                <p class="text-center"><button class="btn btn-primary"><a href="{{URL::to($article['attributes']['url'])}}">READ MORE</a></button></p>
             </div>
 
         {{-- last third column --}}
@@ -60,7 +60,7 @@
                 
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
-                  <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
+                  <p class="text-center"><button class="btn btn-primary"><a href="{{URL::to($article['attributes']['url'])}}">READ MORE</a></button></p>
             </div>
         </div> {{-- close the row --}}    
         @endif
