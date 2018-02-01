@@ -29,6 +29,7 @@ var_dump($column_calculation);
         @if ($column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
+        			Case 1
         			<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                  <h2>{{$article['attributes']['title']}}</h2>
@@ -42,6 +43,7 @@ var_dump($column_calculation);
      			
               <div class="card">
               	Case 2 last column
+              	<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
                  <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
@@ -53,6 +55,7 @@ var_dump($column_calculation);
         @elseif($odd_calculation != 0)
           <div class="card">
           		Case 3 middle column
+          		<?php echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; ?>
                <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
                <h2>{{$article['attributes']['title']}}</h2>
                 <p class="card-text">{{$article['attributes']['description']}}</p>
