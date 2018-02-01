@@ -29,10 +29,10 @@
         {{-- first column --}}
 
         @if ($column_calculation === $column_divisor)
-        	<div class="row">
+        	<div class="row mt-3">
         		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         	
-        		<div class="mr-2 ml-2 p-3" style="border: 2px solid rgb(134, 142, 150);">
+        		<div class="mr-1 ml-1 p-2" style="border: 2px solid rgb(134, 142, 150);">
                 <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
