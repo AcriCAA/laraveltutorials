@@ -55,7 +55,7 @@
               <div class="card">
               	
          
-                {{ HTML::image($article['thumbnail'], 'a picture', array('class' => 'image-cap')) }}
+                {{ HTML::image($article['attributes']['thumbnail'], 'a picture', array('class' => 'image-cap')) }}
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
