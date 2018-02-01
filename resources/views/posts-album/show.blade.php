@@ -31,7 +31,7 @@
         @if ($column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
-                <img class="img-reponsive" src="{{url($articles['attributes']['thumbnail'])}}"
+                <img class="img-reponsive" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
@@ -45,7 +45,7 @@
           <div class="card">
           		
       
-              <img class="img-reponsive" src="{{url($articles['attributes']['thumbnail'])}}"
+              <img class="img-reponsive" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                <h2>{{$article['attributes']['title']}}</h2>
                 <p class="card-text">{{$article['attributes']['description']}}</p>
                 <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
@@ -56,8 +56,8 @@
      			
               <div class="card">
               	
-         
-                {{ HTML::image($article['attributes']['thumbnail'], 'a picture', array('class' => 'image-cap')) }}
+         			<img class="img-reponsive" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
+                
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
