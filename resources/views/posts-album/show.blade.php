@@ -29,7 +29,7 @@
         {{-- first column --}}
 
         @if ($column_calculation === $column_divisor)
-        	<div class="row mt-3">
+        	<div class="row mt-3 d-flex flex-row">
         		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         	
         		<div class="mr-1 ml-1 p-2" style="border: 2px solid rgb(134, 142, 150);">
