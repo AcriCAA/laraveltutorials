@@ -19,7 +19,7 @@ var_dump($column_divisor); ?>
 var_dump($column_calculation);
 
 		$odd_calculation = $column_count % 3; 
-
+		echo "Column Number=" .$column_count. " Column Calulation= ".$column_calculation." Odd Calculation=" . $odd_calculation; 
         ?>
 
        
