@@ -1,9 +1,7 @@
 
 
-<?php $column_divisor = 1/3;
-
-		$second_column_divisor = 2/3; 
-var_dump($column_divisor); ?>
+<?php $column_divisor = round((1/3),2);
+		?>
 
         <div class="album text-muted">
         <div class="container">
@@ -17,7 +15,7 @@ var_dump($column_divisor); ?>
         $n = $column_count / 3; 
 		$whole = floor($n);      
 		$fraction = $n - $whole; 
-        $column_calculation = $fraction;
+        $column_calculation = round($fraction, 2);
 
 
 		$odd_calculation = $column_count % 3; 
@@ -28,7 +26,7 @@ var_dump($column_divisor); ?>
 
         {{-- first column --}}
 
-        @if ($column_calculation >= $column_divisor && $column_calculation <= $second_column_divisor )
+        @if ($column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
         			Case 1
