@@ -29,7 +29,7 @@
         @if ($column_calculation === $column_divisor)
         	<div class="row">
         		<div class="card">
-                 <img data-src="{{$article['thumbnail']}}" alt="Card image cap">
+                {{ HTML::image('img/picture.jpg', 'a picture', array('class' => 'thumb')) }}
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
@@ -43,7 +43,7 @@
           <div class="card">
           		
       
-               <img data-src="{{$article['thumbnail']}}" alt="Card image cap">
+              {{ HTML::image('img/picture.jpg', 'a picture', array('class' => 'thumb')) }}
                <h2>{{$article['attributes']['title']}}</h2>
                 <p class="card-text">{{$article['attributes']['description']}}</p>
                 <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
@@ -55,7 +55,7 @@
               <div class="card">
               	
          
-                 <img data-src="{{$article['thumbnail']}}" alt="Card image cap">
+                {{ HTML::image($article['thumbnail'], 'a picture', array('class' => 'image-cap')) }}
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><button><a href="{{$article['attributes']['url']}}">READ MORE</a></button></p>
