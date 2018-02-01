@@ -30,30 +30,34 @@
 
         @if ($column_calculation === $column_divisor)
         	<div class="row">
+        		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        	
         		<div class="card box-shadow">
                 <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                  <h2>{{$article['attributes']['title']}}</h2>
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><a class="btn btn-primary" href="{{URL::to($article['attributes']['url'])}}">READ MORE</a></p>
             	</div>
-        
+        </div>
 
         
         
         {{-- middle column --}}
         @elseif($odd_calculation != 0)
+          
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
           <div class="card box-shadow">
-          		
-      
+        
               <img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
                <h2>{{$article['attributes']['title']}}</h2>
                 <p class="card-text">{{$article['attributes']['description']}}</p>
                 <p class="text-center"><a class="btn btn-primary" href="{{URL::to($article['attributes']['url'])}}">READ MORE</a></p>
             </div>
+        </div>
 
         {{-- last third column --}}
         @elseif($odd_calculation === 0)
-     			
+     			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
               <div class="card box-shadow">
               	
          			<img class="card-img-top" src="{{ URL::to($article['attributes']['thumbnail']) }}"/>
@@ -62,6 +66,7 @@
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><a class="btn btn-primary" href="{{URL::to($article['attributes']['url'])}}">READ MORE</a></p>
             </div>
+        </div>
         </div> {{-- close the row --}}    
         @endif
         @endforeach
