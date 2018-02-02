@@ -2,8 +2,16 @@
 
 
 @section('content')
+<style>
 
+.header-bg {
+  width:100%;
+  /*height:475px;*/
+  background-image: url("{{$articles[0]['attributes']['thumbnail']}}");
+  background-size:cover;
+}
 
+</style>
     <main role="main">
 
       <section class="jumbotron text-center">
