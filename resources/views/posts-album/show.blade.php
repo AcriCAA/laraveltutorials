@@ -67,6 +67,7 @@
                   <p class="text-center"><a class="btn btn-primary" href="{{URL::to($article['attributes']['url'])}}">READ MORE</a></p>
             </div>
         </div>
+      </div>
         </div> {{-- close the row --}}    
         @endif
         @endforeach
