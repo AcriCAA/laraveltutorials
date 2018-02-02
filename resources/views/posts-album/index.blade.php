@@ -1,3 +1,10 @@
+<?php 
+
+  $article_for_image = $articles[0];
+  $image = article_for_image['attributes']['thumbnail'];
+?>
+
+
 @extends('albummaster')
 
 
@@ -7,7 +14,7 @@
 .header-bg {
   width:100%;
   /*height:475px;*/
-  background-image: url("{{$articles[0]['attributes']['thumbnail']}}");
+  background-image: url("{{$image}}");
   background-size:cover;
 }
 
