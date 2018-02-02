@@ -14,6 +14,7 @@
   /*height:475px;*/
   background-image: url("{{$image}}");
   background-size:cover;
+  background-color:rgba(0, 0, 0, 0.47);
 }
 
 </style>
