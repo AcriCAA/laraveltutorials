@@ -12,7 +12,7 @@
 .header-bg {
   width:100%;
   /*height:475px;*/
-  background:linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)),url("{{$image}}");
+  background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("{{$image}}");
   background-size:cover;
   
 }
