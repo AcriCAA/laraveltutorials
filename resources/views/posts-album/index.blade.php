@@ -32,7 +32,7 @@
           <h1 class="jumbotron-heading white">Autonomous Vehicles</h1>
           <p class="lead white">The latest and most current news on autonomous vehicles, driving, and technology. You've been the Edged.</p>
           <p>
-          <p class="lead text-muted">Looking for more content like this?</p>
+          <p class="lead white">Looking for more content like this?</p>
           <p>
             <a href="http://www.theedge.group/" class="btn btn-primary">Contact Edge Group</a>
           </p>
