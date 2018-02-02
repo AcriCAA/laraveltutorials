@@ -1,7 +1,8 @@
 <?php 
 
-  $article_for_image = $articles[0];
-  $image = article_for_image['attributes']['thumbnail'];
+  var_dump($articles); 
+  // $article_for_image = $articles[0];
+  // $image = article_for_image['attributes']['thumbnail'];
 ?>
 
 
