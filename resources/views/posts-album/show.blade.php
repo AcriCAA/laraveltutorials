@@ -29,7 +29,7 @@
         {{-- first column --}}
 
         @if ($column_calculation === $column_divisor)
-        	<div class="mt-3 d-flex flex-row">
+        	<div class="mt-3 d-flex flex-row row">
         		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         	
         		<div class="mr-1 ml-1 p-2">
@@ -66,8 +66,7 @@
                   <p class="card-text">{{$article['attributes']['description']}}</p>
                   <p class="text-center"><a class="btn btn-primary" href="{{URL::to($article['attributes']['url'])}}">READ MORE</a></p>
             </div>
-        </div>
-      </div>
+        </div>        
         </div> {{-- close the row --}}    
         @endif
         @endforeach
