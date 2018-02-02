@@ -1,8 +1,8 @@
 @php
 
-  var_dump($articles); 
-  // $article_for_image = $articles[0];
-  // $image = article_for_image['attributes']['thumbnail'];
+  
+ 
+   $image = articles['data'][0]['attributes']['thumbnail'];
 @endphp
 
 
@@ -12,7 +12,12 @@
 @section('content')
 <style>
 
-
+.header-bg {
+  width:100%;
+  /*height:475px;*/
+  background-image: url("{{$image}}");
+  background-size:cover;
+}
 
 </style>
     <main role="main">
