@@ -2,7 +2,7 @@
 
   
  
-   $image = articles['data'][0]['attributes']['thumbnail'];
+   $image = articles[0]['attributes']['thumbnail'];
 @endphp
 
 
