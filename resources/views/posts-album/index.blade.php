@@ -1,8 +1,5 @@
 @php
-
-  
- 
-   $image = articles[0]['attributes']['thumbnail'];
+   $image = articles['attributes']['thumbnail'];
 @endphp
 
 
