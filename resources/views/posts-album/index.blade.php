@@ -19,7 +19,7 @@
 </style>
     <main role="main">
 
-      <section class="jumbotron text-center background-image">
+      <section class="jumbotron text-center header-bg">
         <div class="container">
           <h1 class="jumbotron-heading">Autonomous Vehicles</h1>
           <p class="lead text-muted">The latest and most current news on autonomous vehicles, driving, and technology. You've been the Edged.</p>
