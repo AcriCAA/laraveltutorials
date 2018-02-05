@@ -40,6 +40,6 @@ var featureLayer = L.mapbox.featureLayer()
     .loadURL('https://www.rideindego.com/stations/json/')
     .addTo(map);
 
-    
+
 });
 </script>
