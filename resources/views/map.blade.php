@@ -55,12 +55,12 @@ var geojson = { type: 'LineString', coordinates: [
 ] };
 
 var line_points = [
-[39.942829, -75.177240],
-[39.932810, -75.181467],
-[39.932826, -75.1865740],
-[39.938190, -75.185330],
-[39.938185, -75.180191]
-
+[39.938507, -75.180097],
+[39.932590, -75.181316],
+[39.932200, -75.181690],
+[39.932791, -75.186450],
+[39.939118, -75.185090],
+[39.938484, -75.180035]
 ];
 
 var polyline = L.polyline(line_points, polyline_options).addTo(map);
@@ -71,7 +71,7 @@ var polyline_options = {
 };
 
 // Create a marker and add it to the map.
-var marker = L.marker([39.942829, -75.177240], {
+var marker = L.marker([39.938507, -75.180097], {
   icon: L.mapbox.marker.icon({
     'marker-color': '#f86767'
   })
