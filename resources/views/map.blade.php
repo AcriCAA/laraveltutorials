@@ -42,7 +42,7 @@ var map = new mapboxgl.Map({
 
 });
 
-var featureLayer = new mapbox.featureLayer()
+var featureLayer = mapboxgl.featureLayer()
     .loadURL('https://www.rideindego.com/stations/json/')
     .addTo(map);
 </script>
