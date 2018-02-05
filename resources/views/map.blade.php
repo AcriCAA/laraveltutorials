@@ -52,27 +52,31 @@ var geojson = { type: 'LineString', coordinates: [
 [39.938190, -75.185330],
 [39.938185, -75.180191]
 
-] };// Add a new line to the map with no points.
-var polyline = L.polyline([]).addTo(map);
+] };
 
-// Keep a tally of how many points we've added to the map.
-var pointsAdded = 0;
+// Add this generated geojson object to the map.
+L.geoJson(geojson).addTo(map);
 
-// Start drawing the polyline.
-add();
+// Create a counter with a value of 0.
+var j = 0;
 
-function add() {
+// Create a marker and add it to the map.
+var marker = L.marker([39.942829, -75.177240], {
+  icon: L.mapbox.marker.icon({
+    'marker-color': '#f86767'
+  })
+}).addTo(map);
 
-    // `addLatLng` takes a new latLng coordinate and puts it at the end of the
-    // line. You optionally pull points from your data or generate them. Here
-    // we make a sine wave with some math.
+tick();
+function tick() {
+    // Set the marker to be at the same point as one
+    // of the segments or the line.
+    marker.setLatLng(L.latLng(
+        geojson.coordinates[j][1],
+        geojson.coordinates[j][0]));
 
-    geojson.coordinates.forEach((coordinate, index) => {
-        polyline.addLatLng(
-        L.latLng(coordinate);
-    
-});
-
-    
+    // Move to the next point of the line
+    // until `j` reaches the length of the array.
+    if (++j < geojson.coordinates.length) setTimeout(tick, 100);
 }
 </script>
