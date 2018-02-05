@@ -29,7 +29,7 @@
 </html>
 
 <script>
-mapboxgl.accessToken = '{{$key}}';
+mapboxgl.accessToken = '@{{$key}}';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
