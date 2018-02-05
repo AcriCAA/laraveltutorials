@@ -103,6 +103,6 @@ function tick() {
 
     // Move to the next point of the line
     // until `j` reaches the length of the array.
-    if (++j < geojson.coordinates.length) setTimeout(tick, 100);
+    if (++j < geojson.coordinates.length) setTimeout(tick, 10000);
 }
 </script>
