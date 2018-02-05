@@ -63,44 +63,44 @@ var line_points = [
 [39.938484, -75.180035]
 ];
 
-var polyline = L.polyline(line_points, polyline_options).addTo(map);
+// var geojson = { type: 'LineString', coordinates: [] };
+
+//     geojson.coordinates.push(start.slice());
+// }
 
 
-var polyline_options = {
-    color: '#000'
-};
+var geojson = { type: 'LineString', coordinates: [
+[39.942829, -75.177240],
+[39.932810, -75.181467],
+[39.932826, -75.1865740],
+[39.938190, -75.185330],
+[39.938185, -75.180191]
+
+] };
+
+// Add this generated geojson object to the map.
+L.geoJson(geojson).addTo(map);
+
+// Create a counter with a value of 0.
+var j = 0;
 
 // Create a marker and add it to the map.
-
-
-
-
-tick();
-function tick() {
-
-var j = 0; 
-    var marker = L.marker([-75.180097, 39.938507], {
+var marker = L.marker([0, 0], {
   icon: L.mapbox.marker.icon({
     'marker-color': '#f86767'
   })
 }).addTo(map);
+
+tick();
+function tick() {
     // Set the marker to be at the same point as one
     // of the segments or the line.
-var line_points = [
-[39.938507, -75.180097],
-[39.932590, -75.181316],
-[39.932200, -75.181690],
-[39.932791, -75.186450],
-[39.939118, -75.185090],
-[39.938484, -75.180035]
-];
-    
     marker.setLatLng(L.latLng(
-        line_points[j][0],
-        line_points[j][1]));
+        geojson.coordinates[j][1],
+        geojson.coordinates[j][0]));
 
     // Move to the next point of the line
     // until `j` reaches the length of the array.
-    if (++j < line_points.length) setTimeout(tick, 100);
+    if (++j < geojson.coordinates.length) setTimeout(tick, 100);
 }
 </script>
