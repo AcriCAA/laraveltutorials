@@ -79,7 +79,7 @@ tick();
 function tick() {
 
 var j = 0; 
-    var marker = L.marker([39.938507, -75.180097], {
+    var marker = L.marker([-75.180097, 39.938507], {
   icon: L.mapbox.marker.icon({
     'marker-color': '#f86767'
   })
@@ -87,8 +87,8 @@ var j = 0;
     // Set the marker to be at the same point as one
     // of the segments or the line.
     marker.setLatLng(L.latLng(
-        line_points[j][1],
-        line_points[j][0]));
+        line_points[j][0],
+        line_points[j][1]));
 
     // Move to the next point of the line
     // until `j` reaches the length of the array.
