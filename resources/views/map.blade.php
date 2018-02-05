@@ -53,7 +53,7 @@ var geojson = { type: 'LineString', coordinates: [
 [39.938185, -75.180191]
 
 ] };
-var start = [10, 20];
+var start = [39.942829, -75.177240];
 var momentum = [3, 3];
 
 for (var i = 0; i < 300; i++) {
@@ -71,7 +71,7 @@ L.geoJson(geojson).addTo(map);
 var j = 0;
 
 // Create a marker and add it to the map.
-var marker = L.marker([0, 0], {
+var marker = L.marker([39.942829, -75.177240], {
   icon: L.mapbox.marker.icon({
     'marker-color': '#f86767'
   })
