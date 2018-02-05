@@ -34,6 +34,12 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
     center: [-75.25, 40], // starting position [lng, lat]
-    zoom: 9 // starting zoom
+    zoom: 13 // starting zoom
+
+var featureLayer = L.mapbox.featureLayer()
+    .loadURL('https://www.rideindego.com/stations/json/')
+    .addTo(map);
+
+    
 });
 </script>
