@@ -66,7 +66,9 @@ var line_points = [
 var polyline = L.polyline(line_points, polyline_options).addTo(map);
 
 
-
+var polyline_options = {
+    color: '#000'
+};
 
 // Create a marker and add it to the map.
 var marker = L.marker([39.942829, -75.177240], {
