@@ -75,7 +75,7 @@ var marker = L.marker([39.938507, -75.180097], {
   icon: L.mapbox.marker.icon({
     'marker-color': '#f86767'
   })
-}).addTo(map);
+});
 
 
 var j = 0; 
