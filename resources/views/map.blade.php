@@ -35,7 +35,7 @@
 
 L.mapbox.accessToken = '{!!config('services.mapbox.key')!!}';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([-75.25, 40], 15);
+    .setView([39.95, 75.16], 15);
 
 var featureLayer = L.mapbox.featureLayer()
     .loadURL('https://www.rideindego.com/stations/json/')
