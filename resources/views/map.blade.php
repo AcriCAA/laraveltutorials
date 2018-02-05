@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
         <title>Map</title>
 
         <!-- Fonts -->
