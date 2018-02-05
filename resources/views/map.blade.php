@@ -22,14 +22,14 @@
     </style>
     <body>
 
-       <p> Hello</p>
+       <p> {{$key}}</p>
 
         <div id='map'></div>
     </body>
 </html>
 
 <script>
-mapboxgl.accessToken = '{!!json_encode($key)!!}';
+mapboxgl.accessToken = '@{{$key}}';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
