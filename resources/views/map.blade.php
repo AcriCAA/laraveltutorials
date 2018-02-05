@@ -21,12 +21,15 @@
         #map { position:absolute; top:0; bottom:0; width:100%; }
     </style>
     <body>
+
+        {{$key}}
+        
         <div id='map'></div>
     </body>
 </html>
 
 <script>
-mapboxgl.accessToken = '{{$key}}';
+// mapboxgl.accessToken = '{{$key}}';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
