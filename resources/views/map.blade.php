@@ -77,16 +77,18 @@ var marker = L.marker([39.938507, -75.180097], {
   })
 }).addTo(map);
 
-// tick();
-// function tick() {
-//     // Set the marker to be at the same point as one
-//     // of the segments or the line.
-//     marker.setLatLng(L.latLng(
-//         geojson.coordinates[j][1],
-//         geojson.coordinates[j][0]));
 
-//     // Move to the next point of the line
-//     // until `j` reaches the length of the array.
-//     if (++j < geojson.coordinates.length) setTimeout(tick, 100);
-// }
+var j = 0; 
+tick();
+function tick() {
+    // Set the marker to be at the same point as one
+    // of the segments or the line.
+    marker.setLatLng(L.latLng(
+        line_points[j][1],
+        line_points[j][0]));
+
+    // Move to the next point of the line
+    // until `j` reaches the length of the array.
+    if (++j < line_points.length) setTimeout(tick, 100);
+}
 </script>
