@@ -71,6 +71,15 @@ var geojson = { type: 'LineString', coordinates: [
 [39.938484, -75.180035]
 ] };
 
+var geojson = { type: 'LineString', coordinates: [
+[-75.180097, 39.938507],
+[-75.181316, 39.932590],
+[-75.181690, 39.932200],
+[-75.186450, 39.932791],
+[-75.185090, 39.939118],
+[-75.180035, 39.938484]
+] };
+
 // Add this generated geojson object to the map.
 L.geoJson(geojson).addTo(map);
 
