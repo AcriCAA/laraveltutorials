@@ -8,11 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
         <title>Map</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+        <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
     </head>
 
@@ -30,19 +32,12 @@
 </html>
 
 <script>
-mapboxgl.accessToken = '{!!config('services.mapbox.key')!!}';
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-    center: [-75.25, 40], // starting position [lng, lat]
-    zoom: 13 // starting zoom
 
+L.mapbox.accessToken = '{!!config('services.mapbox.key')!!}';
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([-75.25, 40], 15);
 
-
-
-});
-
-var featureLayer = mapboxgl.featureLayer()
+var featureLayer = L.mapbox.featureLayer()
     .loadURL('https://www.rideindego.com/stations/json/')
     .addTo(map);
 </script>
