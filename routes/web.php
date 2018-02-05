@@ -37,6 +37,13 @@ Route::get('/feed', 'FeedController@show');
 
 Route::get('/directions', 'FeedController@directions');
 
+
+Route::get('/map', function(){
+
+$key = config('services.mapbox.key');
+return view('map')->with($key); 	
+});
+
 // Route::get('posts/create', 'PostsController@create');
 
 

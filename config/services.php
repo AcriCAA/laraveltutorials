@@ -50,4 +50,6 @@ return [
 
     ],
 
+    'mapbox' => ['key' => env('MAPBOX'),], 
+
 ];
