@@ -33,7 +33,7 @@ mapboxgl.accessToken = '{!!config('services.mapbox.key')!!}';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-    center: [-74.50, 40], // starting position [lng, lat]
+    center: [-75.25, 40], // starting position [lng, lat]
     zoom: 9 // starting zoom
 });
 </script>
