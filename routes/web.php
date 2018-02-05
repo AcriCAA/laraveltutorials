@@ -40,9 +40,9 @@ Route::get('/directions', 'FeedController@directions');
 
 Route::get('/map', function(){
 
-$key = config('services.mapbox.key');
 
-return view('map')->with(['key', $key]); 	
+
+return view('map'); 	
 });
 
 // Route::get('posts/create', 'PostsController@create');
