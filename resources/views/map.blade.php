@@ -86,6 +86,15 @@ var j = 0;
 }).addTo(map);
     // Set the marker to be at the same point as one
     // of the segments or the line.
+var line_points = [
+[39.938507, -75.180097],
+[39.932590, -75.181316],
+[39.932200, -75.181690],
+[39.932791, -75.186450],
+[39.939118, -75.185090],
+[39.938484, -75.180035]
+];
+    
     marker.setLatLng(L.latLng(
         line_points[j][0],
         line_points[j][1]));
