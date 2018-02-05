@@ -22,7 +22,7 @@
     </style>
     <body>
 
-       <p> {{$key}}</p>
+        {{$key}}
 
         <div id='map'></div>
     </body>
