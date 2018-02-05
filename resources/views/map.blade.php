@@ -71,16 +71,19 @@ var polyline_options = {
 };
 
 // Create a marker and add it to the map.
-var marker = L.marker([39.938507, -75.180097], {
+
+
+
+
+tick();
+function tick() {
+
+var j = 0; 
+    var marker = L.marker([39.938507, -75.180097], {
   icon: L.mapbox.marker.icon({
     'marker-color': '#f86767'
   })
 }).addTo(map);
-
-
-var j = 0; 
-tick();
-function tick() {
     // Set the marker to be at the same point as one
     // of the segments or the line.
     marker.setLatLng(L.latLng(
