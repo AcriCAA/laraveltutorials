@@ -29,8 +29,13 @@
 
 
   <div class="form-group">
-    <label for="body">Body</label>
+    <label for="body">Request</label>
     <textarea type="text" class="form-control" id="body" name="body" required ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="client">Request</label>
+    <textarea type="text" class="form-control" id="client" name="client" required ></textarea>
   </div>
 
 </div>

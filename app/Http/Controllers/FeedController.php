@@ -84,7 +84,6 @@ return view('posts-album.index', ['articles' => $articles]);
 
     $url = 'https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJF_6CulHGxokR95q8du3mxfs&destination=place_id:ChIJj6watKfIxokRp8O5hETvhyA&mode=bicycling&key='.$key; 
 
-
        $response = $client->get($url);
     // $response = $client->delete('http://httpbin.org/delete');
     // $response = $client->head('http://httpbin.org/get');

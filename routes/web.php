@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +17,10 @@
 
 
 // this is setting the url from urlroot/
-// Route::get('/tasks', 'TasksController@index');
+Route::get('/tasks', 'TasksController@index');
 
 // // this is setting the url from urlroot/
-// Route::get('/tasks/{task}', 'TasksController@show'); 
+Route::get('/tasks/{task}', 'TasksController@show'); 
 
 
 Route::get('/', 'PostsController@index'); 
