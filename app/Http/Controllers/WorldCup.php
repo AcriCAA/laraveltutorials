@@ -181,7 +181,7 @@ $response = \Httpful\Request::get($uri)->send();
 return response()->json([
     'text' => $whichMatches,
     'attachments' => 
-$response; 
+$response
 ]);
 // echo "JSON";
 
