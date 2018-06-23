@@ -16,14 +16,14 @@ $games = [];
 
 foreach($response->body as $match){
 
-$matchstring = $match->home_team->country;
+$matchstring = $match->home_team["country"];
 $matchstring.= " "; 
-$matchstring.= $match->home_team->country->goals; 
+$matchstring.= $match->home_team["goals"]
 $matchstring.= " v. "; 
-$matchstring = $match->away_team->country;
+$matchstring = $match->away_team["country"];
 $matchstring.= " "; 
-$matchstring.= $match->away_team->country->goals . "\n"; 
-
+$matchstring.= $match->away_team["goals"];
+$matchstring.= "\n "; 
 array_push($games,$matchstring);
 
 
