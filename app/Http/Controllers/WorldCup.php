@@ -9,6 +9,10 @@ class WorldCup extends Controller
  	public function wcapi(Request $request)
 	{
 
+
+	$command = $request->input('command');
+		$token = $request->input('token');
+		$text = $request->input('text');
 // These are the new env variables to copy into Meetupcontroller to get today working with key
 
 $slack_token = config('services.slack.token');
