@@ -19,6 +19,7 @@
 //     echo 'hello'; 
 // });
 
+Route::get('/wc', 'WorldCup@test');
 Route::get('/worldcup', 'WorldCup@wcapi');
 
 // this is setting the url from urlroot/

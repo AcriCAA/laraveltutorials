@@ -4,11 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use GuzzleHttp\Client;
-
 class WorldCup extends Controller
 {
- 	public function wcapi()
+ 	public function wcapi(Request $request)
 	{
 
 // These are the new env variables to copy into Meetupcontroller to get today working with key
@@ -35,6 +33,15 @@ $text = "current";
 // ****** DO NOT COPY ***** //
 
 
+
+if($token != $slack_token){ 
+	$msg = "This slash command is broken, check with CFP leadership.";
+	die($msg);
+	echo $msg;
+}
+
+else{
+
 // a user can type "/cfp last" to get the last meetup and "/cfp next" to get the next upcoming meetup so here I am setting the text for string comparison 
 // $current = "current";
 $next = "next";
@@ -53,41 +60,39 @@ $uri = $apipath.$todayEvent;
 
 // if user type "/cfp last" this sets the api call url to fetch the current meetup which is defined in the api as "recent_past" here https://www.meetup.com/meetup_api/docs/:urlname/events/#list
 
-// if(strlen($text) == 3 && (strtoupper($text) == $text)){
-// $uri = $apipath.$currentEvent;
-//   $whichMatches = $text . " Matches";
-//   $uri = $apipath.$country.$text;
-// }
-
-// if(strcasecmp($text, $current) == 0)
-//   { 
-//   $uri = $apipath.$currentEvent;
-//   $whichMatches = "Current Matches";
-//   }
-
-// if(strcasecmp($text, $today) == 0)
-//   { 
-//   $uri = $apipath.$todayEvent;
-//   $whichMatches = "Today's Matches";
-//   }
-
-// if(strcasecmp($text, $next) == 0)
-//   { 
-//   $uri = $apipath.$nextEvent;
-//   $whichMatches = "Upcoming Matches";
-//   }
-
-
-//for testing
+if(strlen($text) == 3 && (strtoupper($text) == $text)){
 $uri = $apipath.$currentEvent;
+  $whichMatches = $text . " Matches";
+  $uri = $apipath.$country.$text;
+}
+
+if(strcasecmp($text, $current) == 0)
+  { 
+  $uri = $apipath.$currentEvent;
+  $whichMatches = "Current Matches";
+  }
+
+if(strcasecmp($text, $today) == 0)
+  { 
+  $uri = $apipath.$todayEvent;
+  $whichMatches = "Today's Matches";
+  }
+
+if(strcasecmp($text, $next) == 0)
+  { 
+  $uri = $apipath.$nextEvent;
+  $whichMatches = "Upcoming Matches";
+  }
+
+
+
+
 
 
 
 // using httpful.phar to get and parse JSON object from API 
 // http://phphttpclient.com
-
-  $client = new Client();
-  $response = $client->get($uri);
+$response = \Httpful\Request::get($uri)->send();
 
 // for($response as $r){
 
@@ -153,19 +158,18 @@ $uri = $apipath.$currentEvent;
 //     'attachments' => array($arr)
 // ]);
 
-// return response()->json([
-//     'text' => $whichMatches,
-//     'attachments' => 
-// $response->body[0];
-// ]);
-
-return $response; 
-
-
+return response()->json([
+    'text' => $whichMatches,
+    'attachments' => 
+$response->body[0];
+]);
 // echo "JSON";
 
 // echo $jsonMessage;
+} //close slack check else
 
 } // close function 
+
+
 
 }
