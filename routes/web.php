@@ -20,7 +20,7 @@
 // });
 
 Route::get('/wc', 'WorldCup@test');
-Route::get('/worldcup', 'WorldCup@wcapi');
+Route::post('/worldcup', 'WorldCup@wcapi');
 
 // this is setting the url from urlroot/
 // Route::get('/tasks', 'TasksController@index');
