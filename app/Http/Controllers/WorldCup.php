@@ -12,7 +12,7 @@ class WorldCup extends Controller
  		$uri = $apipath;
  		$response = \Httpful\Request::get($uri)->send();
 
- 		echo $response; 
+ 		var_dump($response); 
 
  	}
 
@@ -181,7 +181,7 @@ $response = \Httpful\Request::get($uri)->send();
 return response()->json([
     'text' => $whichMatches,
     'attachments' => 
-$response->body[0]
+$response; 
 ]);
 // echo "JSON";
 
