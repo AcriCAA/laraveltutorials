@@ -42,7 +42,7 @@ $currentEvent = 'current';
 
 if($token != $slack_token){ 
 	$msg = "This slash command is broken.";
-	die($msg);
+	// die($msg);
 	echo $msg;
 }
 
