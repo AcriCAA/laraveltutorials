@@ -8,7 +8,7 @@ class WorldCup extends Controller
 {
  	public function test(){
  		$apipath = config('services.slack.wc_api');
- 		$uri = $apipath;
+ 		$uri = "https://worldcup.sfg.io/matches/";
  		$response = \Httpful\Request::get($uri)->send();
 
  		echo $response; 
