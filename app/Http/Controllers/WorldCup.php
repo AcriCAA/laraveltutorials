@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class WorldCup extends Controller
 {
- 	
+ 	public function test(){
+
+ 		echo 'hello'; 
+
+ 	}
 
 
  	public function wcapi(Request $request)
