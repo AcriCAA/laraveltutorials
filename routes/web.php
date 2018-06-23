@@ -22,21 +22,21 @@
 Route::get('/worldcup', 'WorldCup@wcapi');
 
 // this is setting the url from urlroot/
-Route::get('/tasks', 'TasksController@index');
+// Route::get('/tasks', 'TasksController@index');
 
-// // this is setting the url from urlroot/
-Route::get('/tasks/{task}', 'TasksController@show'); 
+// // // this is setting the url from urlroot/
+// Route::get('/tasks/{task}', 'TasksController@show'); 
 
 
-Route::get('/', 'PostsController@index'); 
-Route::get('/posts/create', 'PostsController@create2'); 
-Route::post('/posts', 'PostsController@store'); 
-Route::get('/posts/{post}', 'PostsController@show'); 
+// Route::get('/', 'PostsController@index'); 
+// Route::get('/posts/create', 'PostsController@create2'); 
+// Route::post('/posts', 'PostsController@store'); 
+// Route::get('/posts/{post}', 'PostsController@show'); 
 
-Route::post('/posts/{post}/comments', 'CommentsController@store'); 
+// Route::post('/posts/{post}/comments', 'CommentsController@store'); 
 
-Route::get('/register', 'RegistrationController@create');
-Route::get('/login', 'SessionController@create');
+// Route::get('/register', 'RegistrationController@create');
+// Route::get('/login', 'SessionController@create');
 
 Route::get('/feed', 'FeedController@show');
 
@@ -44,8 +44,6 @@ Route::get('/directions', 'FeedController@directions');
 
 
 Route::get('/map', function(){
-
-
 
 return view('map'); 	
 });
