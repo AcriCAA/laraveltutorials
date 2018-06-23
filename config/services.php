@@ -50,6 +50,14 @@ return [
 
     ],
 
+    'slack' => [
+        'wc_api' => env('WC_API'),
+        'token' => env('SLACK_WC_TOKEN'),
+
+    ],
+
+
+
     'mapbox' => ['key' => env('MAPBOX'),], 
 
 ];
