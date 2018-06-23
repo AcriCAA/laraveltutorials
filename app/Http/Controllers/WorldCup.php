@@ -18,7 +18,7 @@ foreach($response->body as $match){
 
 $matchstring = $match->home_team["country"];
 $matchstring.= " "; 
-$matchstring.= $match->home_team["goals"]
+$matchstring.= $match->home_team["goals"];
 $matchstring.= " v. "; 
 $matchstring = $match->away_team["country"];
 $matchstring.= " "; 
