@@ -152,16 +152,16 @@ if(strcasecmp($text, $next) == 0)
 // header('Content-Type: application/json');
 
 // convert theMessage to json so Slack can read it
-// $jsonMessage = json_encode(array("text" => $whichMatches, "attachments" => array($arr))); 
+$jsonMessage = json_encode(array("text" => 'hello'); 
 
 
+return $jsonMessage;
 
 
-
-return response()->json([
-	'level' => 'success',
-    'text' => 'hello'  
-]);
+// return response()->json([
+// 	'level' => 'success',
+//     'text' => 'hello'  
+// ]);
 
 // return response()->json([
 //     'text' => $whichMatches,
