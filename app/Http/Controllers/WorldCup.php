@@ -12,7 +12,14 @@ class WorldCup extends Controller
  		$uri = $apipath;
  		$response = \Httpful\Request::get($uri)->send();
 
- 		var_dump($response); 
+$games = [];
+
+for($response->body as $match){
+
+array_push($games,$match->home_team);
+
+}
+ 		var_dump($games); 
 
  	}
 
@@ -114,11 +121,13 @@ if(strcasecmp($text, $next) == 0)
 // http://phphttpclient.com
 $response = \Httpful\Request::get($uri)->send();
 
-// for($response as $r){
+$games = [];
 
+for($response->body as $match){
 
+array_push($games,$match->home_team);
 
-// }
+}
 
 
 // // grab the title of the event from the response
