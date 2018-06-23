@@ -97,7 +97,7 @@ if(strcasecmp($text, $next) == 0)
 
 // using httpful.phar to get and parse JSON object from API 
 // http://phphttpclient.com
-$response = \Httpful\Request::get($uri)->send();
+// $response = \Httpful\Request::get($uri)->send();
 
 // for($response as $r){
 
@@ -158,16 +158,16 @@ $response = \Httpful\Request::get($uri)->send();
 
 
 
+return response()->json([
+    'text' => 'hello',
+    
+]);
+
 // return response()->json([
 //     'text' => $whichMatches,
-//     'attachments' => array($arr)
+// //     'attachments' => 
+// // $response->body[0]
 // ]);
-
-return response()->json([
-    'text' => $whichMatches,
-//     'attachments' => 
-// $response->body[0]
-]);
 // echo "JSON";
 
 // echo $jsonMessage;
