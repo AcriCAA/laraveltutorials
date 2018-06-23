@@ -15,6 +15,9 @@
 //     return view('welcome');
 // });
 
+Route::get('/worldcup', function () {
+    echo 'hello'; 
+});
 
 // this is setting the url from urlroot/
 Route::get('/tasks', 'TasksController@index');
