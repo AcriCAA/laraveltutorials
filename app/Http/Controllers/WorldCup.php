@@ -123,11 +123,11 @@ $response = \Httpful\Request::get($uri)->send();
 
 $games = [];
 
-for($response->body as $match){
+// for($response->body as $match){
 
-array_push($games,$match->home_team);
+// array_push($games,$match->home_team);
 
-}
+// }
 
 
 // // grab the title of the event from the response
@@ -187,12 +187,12 @@ array_push($games,$match->home_team);
 //     'text' => 'hello'  
 // ]);
 
-return response()->json([
-    'text' => $whichMatches,
-    'attachments' => 
-$response
-]);
-// echo "JSON";
+// return response()->json([
+//     'text' => $whichMatches,
+//     'attachments' => 
+// $response
+// ]);
+echo "JSON";
 
 // echo $jsonMessage;
 } //close slack check else
