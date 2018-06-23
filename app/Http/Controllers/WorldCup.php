@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class WorldCup extends Controller
 {
+ 	
+
+
  	public function wcapi(Request $request)
 	{
 
@@ -32,14 +35,8 @@ $currentEvent = 'current';
 // end copying env variables new
 
 
-// ****** DO NOT COPY ***** //	
-$text = "current";
-// ****** DO NOT COPY ***** //
-
-
-
 if($token != $slack_token){ 
-	$msg = "This slash command is broken, check with CFP leadership.";
+	$msg = "This slash command is broken.";
 	die($msg);
 	echo $msg;
 }
