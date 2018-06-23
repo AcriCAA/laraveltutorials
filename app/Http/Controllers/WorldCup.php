@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use GuzzleHttp\Client;
+
 class WorldCup extends Controller
 {
  	public function wcapi()
@@ -156,6 +158,8 @@ $response = \Httpful\Request::get($uri)->send();
 // ]);
 
 return 'hello'; 
+
+
 // echo "JSON";
 
 // echo $jsonMessage;
