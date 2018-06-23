@@ -37,12 +37,12 @@ $countrycall = 'country?fifa_code=';
 
 $currentEvent = 'current';
 
-// end copying env variables new
+
 
 
 if($token != $slack_token){ 
 	$msg = "This slash command is broken.";
-	// die($msg);
+	die($msg);
 	echo $msg;
 }
 
@@ -156,13 +156,13 @@ if(strcasecmp($text, $next) == 0)
 $jsonMessage = json_encode(array("text" => 'hello')); 
 
 
-return $jsonMessage;
+// return $jsonMessage;
 
 
-// return response()->json([
-// 	'level' => 'success',
-//     'text' => 'hello'  
-// ]);
+return response()->json([
+	'level' => 'success',
+    'text' => 'hello'  
+]);
 
 // return response()->json([
 //     'text' => $whichMatches,
