@@ -22,6 +22,8 @@ public function wcapi(Request $request)
 
 {
 
+	  \Log::info('Sending message to slack');
+
 $command = $request->input('command');
 $token = $request->input('token');
 $text = $request->input('text');
