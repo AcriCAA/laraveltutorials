@@ -53,33 +53,33 @@ $uri = $apipath.$todayEvent;
 
 // if user type "/cfp last" this sets the api call url to fetch the current meetup which is defined in the api as "recent_past" here https://www.meetup.com/meetup_api/docs/:urlname/events/#list
 
-if(strlen($text) == 3 && (strtoupper($text) == $text)){
+// if(strlen($text) == 3 && (strtoupper($text) == $text)){
+// $uri = $apipath.$currentEvent;
+//   $whichMatches = $text . " Matches";
+//   $uri = $apipath.$country.$text;
+// }
+
+// if(strcasecmp($text, $current) == 0)
+//   { 
+//   $uri = $apipath.$currentEvent;
+//   $whichMatches = "Current Matches";
+//   }
+
+// if(strcasecmp($text, $today) == 0)
+//   { 
+//   $uri = $apipath.$todayEvent;
+//   $whichMatches = "Today's Matches";
+//   }
+
+// if(strcasecmp($text, $next) == 0)
+//   { 
+//   $uri = $apipath.$nextEvent;
+//   $whichMatches = "Upcoming Matches";
+//   }
+
+
+//for testing
 $uri = $apipath.$currentEvent;
-  $whichMatches = $text . " Matches";
-  $uri = $apipath.$country.$text;
-}
-
-if(strcasecmp($text, $current) == 0)
-  { 
-  $uri = $apipath.$currentEvent;
-  $whichMatches = "Current Matches";
-  }
-
-if(strcasecmp($text, $today) == 0)
-  { 
-  $uri = $apipath.$todayEvent;
-  $whichMatches = "Today's Matches";
-  }
-
-if(strcasecmp($text, $next) == 0)
-  { 
-  $uri = $apipath.$nextEvent;
-  $whichMatches = "Upcoming Matches";
-  }
-
-
-
-
 
 
 
