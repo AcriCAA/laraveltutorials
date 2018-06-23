@@ -159,7 +159,7 @@ if(strcasecmp($text, $next) == 0)
 
 
 return response()->json([
-	'level' => 'success'
+	'level' => 'success',
     'text' => 'hello'  
 ]);
 
