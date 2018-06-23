@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 class WorldCup extends Controller
 {
  	public function test(){
+ 		$apipath = config('services.slack.wc_api');
+ 		$uri = $apipath;
+ 		$response = \Httpful\Request::get($uri)->send();
 
- 		echo 'hello'; 
+ 		echo $response; 
 
  	}
 
@@ -98,7 +101,7 @@ if(strcasecmp($text, $next) == 0)
 
 // using httpful.phar to get and parse JSON object from API 
 // http://phphttpclient.com
-// $response = \Httpful\Request::get($uri)->send();
+$response = \Httpful\Request::get($uri)->send();
 
 // for($response as $r){
 
