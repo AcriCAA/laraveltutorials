@@ -149,11 +149,13 @@ $response = \Httpful\Request::get($uri)->send();
 //     'attachments' => array($arr)
 // ]);
 
-return response()->json([
-    'text' => $whichMatches,
-    'attachments' => 
-$response->body[0];
-]);
+// return response()->json([
+//     'text' => $whichMatches,
+//     'attachments' => 
+// $response->body[0];
+// ]);
+
+return 'hello'; 
 // echo "JSON";
 
 // echo $jsonMessage;
