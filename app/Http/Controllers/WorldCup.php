@@ -14,7 +14,7 @@ class WorldCup extends Controller
 
 $games = [];
 
-for($response->body as $match){
+foreach($response->body as $match){
 
 array_push($games,$match->home_team);
 
