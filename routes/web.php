@@ -19,8 +19,8 @@
 //     echo 'hello'; 
 // });
 
-Route::get('wc', 'WorldCup@test');
-Route::post('worldcup', 'WorldCup@wcapi');
+Route::get('/wc', 'WorldCup@test');
+Route::post('/worldcup', 'WorldCup@wcapi');
 
 // this is setting the url from urlroot/
 // Route::get('/tasks', 'TasksController@index');
