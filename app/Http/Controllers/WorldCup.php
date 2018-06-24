@@ -165,7 +165,7 @@ $home_goals = 0;
 if(!empty($match->home_team->goals))
 	$home_goals = $match->home_team->goals;
 
-$matchstring.= '-<strong> '.$home_goals. '</strong>'; 
+$matchstring.= '-* '.$home_goals. '*'; 
 
 
 
@@ -175,7 +175,7 @@ $away_goals = 0;
 if(!empty($match->away_team->goals))
 	$away_goals = $match->away_team->goals;
 
-$matchstring.= '<strong>'.$away_goals. '</strong> - '; 
+$matchstring.= '*'.$away_goals. '* - '; 
 
 
 $matchstring .= $match->away_team->country;
