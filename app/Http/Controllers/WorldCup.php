@@ -138,7 +138,7 @@ public function parseResponse($games, $response){
 					if($match->home_team->country !== "To Be Determined"){
 
 						
-						$matchstring = ":trophy:";
+						$matchstring = ":trophy:\n";
 
 						$matchstring .= ":stadium: "."_".$match->location."_"."\n"; 
 
