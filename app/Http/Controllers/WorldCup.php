@@ -178,7 +178,7 @@ public function parseResponse($games, $response){
 						$dte = $match->last_event_update_at; 
 						date_default_timezone_set('America/New_York');	
 						$date = date('M d, Y g a', strtotime($dte)); // 2018-01-05
-						$matchstring.= "_Last Update: ".$date . "\n_"; 
+						$matchstring.= "`"."Last Update: ".$date . "`"."\n"; 
 						}
 
 
