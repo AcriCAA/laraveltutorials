@@ -254,10 +254,12 @@ $title = "title";
 //     'text' => 'hello'  
 // ]);
 
-return response()->json([
-    'text' => $whichMatches,
-    'attachments' => $arr
-]);
+echo $game_text; 
+
+// return response()->json([
+//     'text' => $whichMatches,
+//     'attachments' => $arr
+// ]);
 
 
 // echo $jsonMessage;
