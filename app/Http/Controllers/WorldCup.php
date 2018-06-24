@@ -14,40 +14,7 @@ class WorldCup extends Controller
 
 		$games = [];
 
-		foreach($response->body as $match){
-
-			$matchstring = $match->home_team->country;
-			$matchstring.= " "; 
-
-			$home_goals = 0; 
-			if(!empty($match->home_team->goals))
-				$home_goals = $match->home_team->goals;
-
-			$matchstring.= '-<strong> '.$home_goals. '</strong>'; 
-
-
-
-			$matchstring.= " v. "; 
-
-			$away_goals = 0; 
-			if(!empty($match->away_team->goals))
-				$away_goals = $match->away_team->goals;
-
-			$matchstring.= '<strong>'.$away_goals. '</strong> - '; 
-
-
-			$matchstring .= $match->away_team->country;
-// $matchstring.= " "; 
-// $matchstring.= $match->away_team->goals;
-
-
-			$matchstring.= "\n "; 
-
-			array_push($games,$matchstring);
-
-// array_push($games,$match);
-
-		}
+		$games = $this->parseResponse($games, $response); 
 
 		echo '<pre>';
 		print_r($games); 
@@ -105,24 +72,16 @@ class WorldCup extends Controller
 			$current = "current";
 			$today = "today";
 
-// whichMeetup holds the text value to be passed into the json output for slack 
-// here setting the default text to "Next Meetup"
+// whichMatches holds the text value to be passed into the json output for slack 
 			$whichMatches = "All Matches"; 
 
-// api call url set in intialize.php
-// default state of the api call is the next meetup
-			$uri = $apipath;
+
+// default state of the api call
+$uri = $apipath;
 
 
 
-// if user type "/cfp last" this sets the api call url to fetch the current meetup which is defined in the api as "recent_past" here https://www.meetup.com/meetup_api/docs/:urlname/events/#list
-
-// if(strlen($text) == 3 && (strtoupper($text) == $text)){
-// $uri = $apipath.$currentEvent;
-//   $whichMatches = $text . " Matches";
-//   $uri = $apipath.$country.$text;
-// }
-
+//looking at the $text to determine which api call 
 			if(strcasecmp($text, $current) == 0)
 			{ 
 				$uri = $apipath.$currentEvent;
@@ -135,17 +94,6 @@ class WorldCup extends Controller
 				$whichMatches = "Today's Matches";
 			}
 
-// if(strcasecmp($text, $next) == 0)
-//   { 
-//   $uri = $apipath;
-//   $whichMatches = "Upcoming Matches";
-//   }
-
-
-
-
-
-
 
 // using httpful.phar to get and parse JSON object from API 
 // http://phphttpclient.com
@@ -153,7 +101,7 @@ class WorldCup extends Controller
 
 			$games = [];
 
-			$games = parseResponse($response); 
+			$games = $this->parseResponse($games, $response); 
 
 
 			$game_text = implode("\n", $games);
@@ -174,7 +122,12 @@ class WorldCup extends Controller
 
 } // close function 
 
-public function parseResponse($response){
+
+
+
+
+
+public function parseResponse($games, $response){
 
 
 
@@ -183,7 +136,9 @@ public function parseResponse($response){
 
 					//if it is to be determined, don't add it to the array
 					if($match->home_team->country !== "To Be Determined"){
-						$matchstring =  $match->home_team->country;
+
+						
+						$matchstring=  $match->home_team->country;
 
 						$matchstring.= " "; 
 
@@ -209,6 +164,20 @@ public function parseResponse($response){
 
 
 						$matchstring.= "\n "; 
+						$matchstring .= $match->time;						
+						$matchstring.= "\n "; 
+
+						
+						
+
+						if(null !== $match->last_event_update_at){
+						$dte = $match->last_event_update_at; 
+						$date = date('M d, Y', strtotime($dte)); // 2018-01-05
+						$matchstring.= $date . "\n"; 
+						}
+
+
+						
 
 						array_push($games, $matchstring);
 					}
