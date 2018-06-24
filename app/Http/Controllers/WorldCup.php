@@ -225,11 +225,7 @@ array_push($games,$matchstring);
 // $placeCity = $response->body[0]->venue->city; 
 
 
-//take the compiled list of games and turn the array in to text string
-foreach ($games as $game) {
-	$game_text = $game;	
-	$game_text.= "\n";
-}
+
 
 //convert the string back to an array 
 // $game_text_array = array($game_text); 
@@ -237,7 +233,7 @@ foreach ($games as $game) {
 $title = "title"; 
 // creating slack json attachments array
   $arr = array("title" => $title,
-   "text" => $game_text);
+   "text" => implode('\n', $games));
 
 // set json header for Slack 
 // header('Content-Type: application/json');
@@ -254,12 +250,12 @@ $title = "title";
 //     'text' => 'hello'  
 // ]);
 
-echo $game_text; 
+// echo $game_text; 
 
-// return response()->json([
-//     'text' => $whichMatches,
-//     'attachments' => $arr
-// ]);
+return response()->json([
+    'text' => $whichMatches,
+    'attachments' => $arr
+]);
 
 
 // echo $jsonMessage;
