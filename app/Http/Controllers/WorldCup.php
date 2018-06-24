@@ -257,7 +257,7 @@ array_push($games,$matchstring);
 
 return response()->json([
     'text' => $whichMatches,
-    'attachments' => $games;
+    'attachments' => $games
 ]);
 
 
