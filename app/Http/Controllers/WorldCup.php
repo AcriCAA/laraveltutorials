@@ -230,10 +230,10 @@ array_push($games,$matchstring);
 //convert the string back to an array 
 // $game_text_array = array($game_text); 
 
-$title = "title"; 
-// creating slack json attachments array
-  $arr = array("title" => $title,
-   "text" => implode('\n', $games));
+// $title = "title"; 
+// // creating slack json attachments array
+//   $arr = array("title" => $title,
+//    "text" => implode('\n', $games));
 
 // set json header for Slack 
 // header('Content-Type: application/json');
@@ -254,7 +254,7 @@ $title = "title";
 
 return response()->json([
     'text' => $whichMatches,
-    'attachments' => $arr
+    'attachments' => json_encode($games)
 ]);
 
 
