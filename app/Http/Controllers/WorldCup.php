@@ -63,13 +63,8 @@ class WorldCup extends Controller
 
 // echo $response; 
 
-		if($token != $slack_token){ 
-			$msg = "This slash command is broken.";
-			die($msg);
-			echo $msg;
-		}
-
-		else{
+		if($token == $slack_token || $token == $token_cfp){ 
+		
 
 // a user can type to get the last meetup and "/cfp next" to get the next upcoming meetup so here I am setting the text for string comparison 
 // $current = "current";
@@ -133,7 +128,14 @@ $uri = $apipath;
 
 
 // echo $jsonMessage;
-} //close slack check else
+} //close slack check if
+		else{
+	$msg = "This slash command is broken.";
+			die($msg);
+			echo $msg;
+		}
+
+
 
 
 } // close function 
