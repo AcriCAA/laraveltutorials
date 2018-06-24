@@ -237,7 +237,7 @@ foreach ($games as $game) {
 $title = "title"; 
 // creating slack json attachments array
   $arr = array("title" => $title,
-   "text" => $game_text_array);
+   "text" => $game_text);
 
 // set json header for Slack 
 // header('Content-Type: application/json');
