@@ -200,10 +200,13 @@ array_push($games, $matchstring);
 
 $game_text = implode("\n", $games);
 
+// // creating slack json attachments array
+  $arr = array("title" => "Matches",
+   "text" => $game_text);
+
 return response()->json([
-	'title' => $whichMatches,
-    'text' => $game_text
-    // 'attachments' => $arr
+	'text' => $whichMatches,
+    'attachments' => $arr
 ]);
 
 
