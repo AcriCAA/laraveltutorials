@@ -233,7 +233,7 @@ array_push($games, $matchstring);
 $title = "title"; 
 // creating slack json attachments array
   $arr = array("title" => $title,
-   "text" => implode('|', $games));
+   "text" => "texts/ntexts/ntexts");
 
 // set json header for Slack 
 // header('Content-Type: application/json');
