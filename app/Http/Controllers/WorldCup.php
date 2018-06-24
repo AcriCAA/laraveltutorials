@@ -63,7 +63,7 @@ class WorldCup extends Controller
 
 // echo $response; 
 
-		if($token == $slack_token || $token == $token_cfp){ 
+		if($token == $slack_token || $token == $slack_token_cfp){ 
 		
 
 // a user can type to get the last meetup and "/cfp next" to get the next upcoming meetup so here I am setting the text for string comparison 
