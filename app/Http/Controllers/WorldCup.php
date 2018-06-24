@@ -60,7 +60,6 @@ public function wcapi(Request $request)
 
 {
 
-	  \Log::error('Sending message to slack');
 
 $command = $request->input('command');
 $token = $request->input('token');
@@ -130,11 +129,11 @@ $uri = $apipath;
 //   $whichMatches = "Current Matches";
 //   }
 
-// if(strcasecmp($text, $today) == 0)
-//   { 
-//   $uri = $apipath.$todayEvent;
-//   $whichMatches = "Today's Matches";
-//   }
+if(strcasecmp($text, $today) == 0)
+  { 
+  $uri = $apipath.$todayEvent;
+  $whichMatches = "Today's Matches";
+  }
 
 // if(strcasecmp($text, $next) == 0)
 //   { 
@@ -202,6 +201,7 @@ array_push($games, $matchstring);
 $game_text = implode("\n", $games);
 
 return response()->json([
+	'title' => $whichMatches,
     'text' => $game_text
     // 'attachments' => $arr
 ]);
