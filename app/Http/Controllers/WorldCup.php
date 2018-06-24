@@ -138,9 +138,9 @@ public function parseResponse($games, $response){
 					if($match->home_team->country !== "To Be Determined"){
 
 						
-						$matchstring = ":trophy::trophy::trophy::trophy::trophy::trophy::trophy:\n";
 
-						$matchstring .= ":stadium: "."_".$match->location."_"."\n"; 
+
+						$matchstring = ":stadium: "."_".$match->location."_"."\n"; 
 
 						$gme_date = $match->datetime; 
 						date_default_timezone_set('America/New_York');
@@ -186,7 +186,7 @@ public function parseResponse($games, $response){
 						$date = date('M d, Y g a', strtotime($dte)); // 2018-01-05
 						$matchstring.= "_"."Last Update: ".$date . "_"."\n"; 
 						}
-						$matchstring.= "=================="; 
+						$matchstring .= ":trophy::trophy::trophy::trophy::trophy::trophy::trophy:\n";
 
 
 						
