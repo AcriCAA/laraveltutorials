@@ -38,6 +38,7 @@ class WorldCup extends Controller
 
 
 		$slack_token = config('services.slack.token');
+		$slack_token_cfp = config('services.slack.token_cfp');
 
 		$apipath = config('services.slack.wc_api');
 
@@ -62,7 +63,7 @@ class WorldCup extends Controller
 
 // echo $response; 
 
-		if($token != $slack_token){ 
+		if($token != $slack_token || $token != $slack_token_cfp){ 
 			$msg = "This slash command is broken.";
 			die($msg);
 			echo $msg;

@@ -53,6 +53,7 @@ return [
     'slack' => [
         'wc_api' => env('WC_API'),
         'token' => env('SLACK_WC_TOKEN'),
+        'token_cfp' => env('SLACK_WC_TOKEN_CFP')
 
     ],
 
