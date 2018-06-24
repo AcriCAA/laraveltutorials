@@ -197,11 +197,11 @@ public function parseResponse($games, $response){
 						$matchstring .= $match->away_team->country." :soccer:";
 
 
-
+						if(!empty($match->time)){
 						$matchstring.= "\n "; 
-						$matchstring .= "`".$match->time."`";						
+						$matchstring .= ":clock1: "."`".$match->time."`";						
 						$matchstring.= "\n "; 
-
+						}
 						
 
 						if(null !== $match->last_event_update_at){
