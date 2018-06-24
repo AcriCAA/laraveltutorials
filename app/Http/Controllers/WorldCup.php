@@ -226,7 +226,7 @@ array_push($games,$matchstring);
 
 foreach ($games as $game) {
 	$game_text = $game;	
-	$game_text.= "\n" 
+	$game_text.= "\n";
 }
 
 
