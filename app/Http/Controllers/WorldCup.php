@@ -224,24 +224,20 @@ array_push($games,$matchstring);
 // //grab the city where the event is being held 
 // $placeCity = $response->body[0]->venue->city; 
 
+
+//take the compiled list of games and turn the array in to text string
 foreach ($games as $game) {
 	$game_text = $game;	
 	$game_text.= "\n";
 }
 
+//convert the string back to an array 
+// $game_text_array = array($game_text); 
 
-// // creating slack json attachments array
-//   $arr = array("title" => $title,
-//    "text" => $placeTitle
-//    ."\n".
-//    $placeStreet
-//    ."\n".
-//    $placeCity
-//    ."\n".
-//    "When: "
-//    .$date
-//    ."\n". 
-//    "Time: ".$time);
+$title = "title"; 
+// creating slack json attachments array
+  $arr = array("title" => $title,
+   "text" => $game_text_array);
 
 // set json header for Slack 
 // header('Content-Type: application/json');
@@ -260,7 +256,7 @@ foreach ($games as $game) {
 
 return response()->json([
     'text' => $whichMatches,
-    'attachments' => $game_text
+    'attachments' => $arr
 ]);
 
 
