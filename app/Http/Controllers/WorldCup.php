@@ -137,8 +137,16 @@ public function parseResponse($games, $response){
 					//if it is to be determined, don't add it to the array
 					if($match->home_team->country !== "To Be Determined"){
 
+						$matchstring = "_".$match->location."_"."\n"; 
+
+						$gme_date = $match->datetime; 
+						date_default_timezone_set('America/New_York');
+						$game_date = date('M d, Y g a', strtotime($gme_date)); 
 						
-						$matchstring=  $match->home_team->country;
+						
+						$matchstring.= "*".$game_date . "*\n"; 
+						
+						$matchstring.=  $match->home_team->country;
 
 						$matchstring.= " "; 
 
@@ -164,21 +172,16 @@ public function parseResponse($games, $response){
 
 
 						$matchstring.= "\n "; 
-						$matchstring .= $match->time;						
+						$matchstring .= "`".$match->time."`";						
 						$matchstring.= "\n "; 
 
-						$gme_date = $match->datetime; 
-						date_default_timezone_set('America/New_York');
-						$game_date = date('M d, Y g a', strtotime($gme_date)); 
 						
-						
-						$matchstring.= "Game Date: ".$game_date . "\n"; 
 
 						if(null !== $match->last_event_update_at){
 						$dte = $match->last_event_update_at; 
 						date_default_timezone_set('America/New_York');	
 						$date = date('M d, Y g a', strtotime($dte)); // 2018-01-05
-						$matchstring.= "`"."Last Update: ".$date . "`"."\n"; 
+						$matchstring.= "_"."Last Update: ".$date . "_"."\n"; 
 						}
 
 
