@@ -185,7 +185,7 @@ $matchstring .= $match->away_team->country;
 
 $matchstring.= "\n "; 
 
-array_push($games,$matchstring);
+array_push($games, $matchstring);
 
 // array_push($games,$match);
 
@@ -230,10 +230,10 @@ array_push($games,$matchstring);
 //convert the string back to an array 
 // $game_text_array = array($game_text); 
 
-// $title = "title"; 
-// // creating slack json attachments array
-//   $arr = array("title" => $title,
-//    "text" => implode('\n', $games));
+$title = "title"; 
+// creating slack json attachments array
+  $arr = array("title" => $title,
+   "text" => implode('|', $games));
 
 // set json header for Slack 
 // header('Content-Type: application/json');
@@ -254,7 +254,7 @@ array_push($games,$matchstring);
 
 return response()->json([
     'text' => $whichMatches,
-    'attachments' => json_encode($games)
+    'attachments' => $arr
 ]);
 
 
