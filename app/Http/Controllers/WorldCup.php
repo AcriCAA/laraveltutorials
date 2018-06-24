@@ -8,7 +8,7 @@ class WorldCup extends Controller
 {
 	public function test(){
 		$apipath = config('services.slack.wc_api');
-		$uri = "https://worldcup.sfg.io/matches/today";
+		$uri = "https://worldcup.sfg.io/matches/country?fifa_code=ARG";
 		
 		$response = \Httpful\Request::get($uri)->send();
 
@@ -98,6 +98,12 @@ $uri = $apipath;
 			if(strcasecmp($text, $next) == 0)
 			{ 
 				$future = TRUE; 
+			}
+
+			if(strlen($text) == 3 && (strtoupper($text) == $text)){
+				$uri = $apipath.$currentEvent;
+  				$whichMatches = $text . " Matches";
+  				$uri = $apipath.$countrycall.$text;
 			}
 
 
