@@ -8,17 +8,21 @@ class WorldCup extends Controller
 {
 	public function test(){
 		$apipath = config('services.slack.wc_api');
-		$uri = "https://worldcup.sfg.io/matches/";
-		$uri = $apipath;
+		$uri = "https://worldcup.sfg.io/matches/today";
+		
 		$response = \Httpful\Request::get($uri)->send();
 
 		$games = [];
 
 		$games = $this->parseResponse($games, $response); 
 
+
+		if(count($games) > 0){
 		echo '<pre>';
 		print_r($games); 
 		echo '</pre>';
+		}
+
 	}
 
 
@@ -66,11 +70,12 @@ class WorldCup extends Controller
 
 		else{
 
-// a user can type "/cfp last" to get the last meetup and "/cfp next" to get the next upcoming meetup so here I am setting the text for string comparison 
+// a user can type to get the last meetup and "/cfp next" to get the next upcoming meetup so here I am setting the text for string comparison 
 // $current = "current";
 			$next = "next";
 			$current = "current";
 			$today = "today";
+			$future = FALSE;
 
 // whichMatches holds the text value to be passed into the json output for slack 
 			$whichMatches = "All Matches"; 
@@ -94,6 +99,11 @@ $uri = $apipath;
 				$whichMatches = "Today's Matches";
 			}
 
+			if(strcasecmp($text, $next) == 0)
+			{ 
+				$future = TRUE; 
+			}
+
 
 // using httpful.phar to get and parse JSON object from API 
 // http://phphttpclient.com
@@ -103,12 +113,17 @@ $uri = $apipath;
 
 			$games = $this->parseResponse($games, $response); 
 
+			if(count($games) > 0){
 
 			$game_text = implode("\n", $games);
 
 			// creating slack json attachments array
-			$arr = array("title" => "Scores",
+			$arr = array("title" => "Games",
 				"text" => $game_text);
+
+			}
+			else 
+				$arr = array("title" => "No Games Right Now");
 
 			return response()->json([
 				'text' => $whichMatches,
