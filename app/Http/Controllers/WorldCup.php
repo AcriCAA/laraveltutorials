@@ -167,13 +167,18 @@ public function parseResponse($games, $response){
 						$matchstring .= $match->time;						
 						$matchstring.= "\n "; 
 
+						$gme_date = $match->datetime; 
+						date_default_timezone_set('America/New_York');
+						$game_date = date('M d, Y g a', strtotime($gme_date)); 
 						
 						
+						$matchstring.= "Game Date: ".$game_date . "\n"; 
 
 						if(null !== $match->last_event_update_at){
 						$dte = $match->last_event_update_at; 
-						$date = date('M d, Y', strtotime($dte)); // 2018-01-05
-						$matchstring.= $date . "\n"; 
+						date_default_timezone_set('America/New_York');	
+						$date = date('M d, Y g a', strtotime($dte)); // 2018-01-05
+						$matchstring.= "_Last Update: ".$date . "\n_"; 
 						}
 
 
