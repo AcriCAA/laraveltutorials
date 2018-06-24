@@ -16,21 +16,42 @@ $games = [];
 
 foreach($response->body as $match){
 
-// $matchstring = $match->home_team;
-// $matchstring.= " "; 
-// $matchstring.= $match->home_team["goals"];
-// $matchstring.= " v. "; 
-// $matchstring = $match->away_team["country"];
-// $matchstring.= " "; 
-// $matchstring.= $match->away_team["goals"];
-// $matchstring.= "\n "; 
-// array_push($games,$matchstring);
+$matchstring = $match->home_team->country;
+$matchstring.= " "; 
 
-array_push($games,$match);
+$home_goals = 0; 
+if(!empty($match->home_team->goals))
+	$home_goals = $match->home_team->goals;
+
+$matchstring.= '-<strong> '.$home_goals. '</strong>'; 
+
+
+
+$matchstring.= " v. "; 
+
+$away_goals = 0; 
+if(!empty($match->away_team->goals))
+	$away_goals = $match->away_team->goals;
+
+$matchstring.= '<strong>'.$away_goals. '</strong> - '; 
+
+
+$matchstring .= $match->away_team->country;
+// $matchstring.= " "; 
+// $matchstring.= $match->away_team->goals;
+
+
+$matchstring.= "\n "; 
+
+array_push($games,$matchstring);
+
+// array_push($games,$match);
 
 }
- 		print_r($games); 
 
+	echo '<pre>';
+ 		print_r($games); 
+echo '</pre>';
  	}
 
 
@@ -91,35 +112,35 @@ $whichMatches = "Upcoming Matches";
 
 // api call url set in intialize.php
 // default state of the api call is the next meetup
-$uri = $apipath.$todayEvent;
+$uri = $apipath;
 
 
 
 // if user type "/cfp last" this sets the api call url to fetch the current meetup which is defined in the api as "recent_past" here https://www.meetup.com/meetup_api/docs/:urlname/events/#list
 
-if(strlen($text) == 3 && (strtoupper($text) == $text)){
-$uri = $apipath.$currentEvent;
-  $whichMatches = $text . " Matches";
-  $uri = $apipath.$country.$text;
-}
+// if(strlen($text) == 3 && (strtoupper($text) == $text)){
+// $uri = $apipath.$currentEvent;
+//   $whichMatches = $text . " Matches";
+//   $uri = $apipath.$country.$text;
+// }
 
-if(strcasecmp($text, $current) == 0)
-  { 
-  $uri = $apipath.$currentEvent;
-  $whichMatches = "Current Matches";
-  }
+// if(strcasecmp($text, $current) == 0)
+//   { 
+//   $uri = $apipath.$currentEvent;
+//   $whichMatches = "Current Matches";
+//   }
 
-if(strcasecmp($text, $today) == 0)
-  { 
-  $uri = $apipath.$todayEvent;
-  $whichMatches = "Today's Matches";
-  }
+// if(strcasecmp($text, $today) == 0)
+//   { 
+//   $uri = $apipath.$todayEvent;
+//   $whichMatches = "Today's Matches";
+//   }
 
-if(strcasecmp($text, $next) == 0)
-  { 
-  $uri = $apipath.$nextEvent;
-  $whichMatches = "Upcoming Matches";
-  }
+// if(strcasecmp($text, $next) == 0)
+//   { 
+//   $uri = $apipath;
+//   $whichMatches = "Upcoming Matches";
+//   }
 
 
 
@@ -132,6 +153,43 @@ if(strcasecmp($text, $next) == 0)
 $response = \Httpful\Request::get($uri)->send();
 
 $games = [];
+
+$games = [];
+
+foreach($response->body as $match){
+
+$matchstring = $match->home_team->country;
+$matchstring.= " "; 
+
+$home_goals = 0; 
+if(!empty($match->home_team->goals))
+	$home_goals = $match->home_team->goals;
+
+$matchstring.= '-<strong> '.$home_goals. '</strong>'; 
+
+
+
+$matchstring.= " v. "; 
+
+$away_goals = 0; 
+if(!empty($match->away_team->goals))
+	$away_goals = $match->away_team->goals;
+
+$matchstring.= '<strong>'.$away_goals. '</strong> - '; 
+
+
+$matchstring .= $match->away_team->country;
+// $matchstring.= " "; 
+// $matchstring.= $match->away_team->goals;
+
+
+$matchstring.= "\n "; 
+
+array_push($games,$matchstring);
+
+// array_push($games,$match);
+
+}
 
 // for($response->body as $match){
 
@@ -197,12 +255,11 @@ $games = [];
 //     'text' => 'hello'  
 // ]);
 
-// return response()->json([
-//     'text' => $whichMatches,
-//     'attachments' => 
-// $response
-// ]);
-echo "JSON";
+return response()->json([
+    'text' => $whichMatches,
+    'attachments' => $games;
+]);
+
 
 // echo $jsonMessage;
 } //close slack check else
