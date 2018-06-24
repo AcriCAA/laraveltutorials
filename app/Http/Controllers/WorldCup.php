@@ -206,7 +206,7 @@ $game_text = implode("\n", $games);
 
 return response()->json([
 	'text' => $whichMatches,
-    'attachments' => $arr
+    'attachments' => array($arr)
 ]);
 
 
