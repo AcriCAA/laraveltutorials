@@ -198,63 +198,12 @@ array_push($games, $matchstring);
 // }
 
 
-// // grab the title of the event from the response
-// $title = $response->body[0]->home;
 
-
-
-// // grab the time of the event from the response 
-// $time = $response->body[0]->time; 
-// $timeOffset = $response->body[0]->utc_offset; // time offset in the api is a negative number
-
-
-// // convert the date and time to user readable format 
-// $epoch = ($time+$timeOffset)/1000;
-// // echo date('r', $epoch); // output as RFC 2822 date - returns local time
-// $date = gmdate('M d', $epoch); 
-// $time = gmdate('g a', $epoch);
-
-
-// // grab the title of the place where the event is being held
-// $placeTitle = $response->body[0]->venue->name;
-
-// //grab the street address where the event is being held
-// $placeStreet = $response->body[0]->venue->address_1;
-
-// //grab the city where the event is being held 
-// $placeCity = $response->body[0]->venue->city; 
-
-
-
-
-//convert the string back to an array 
-// $game_text_array = array($game_text); 
-
-$title = "title"; 
-// creating slack json attachments array
-  $arr = array("title" => $title,
-   "text" => "texts/ntexts/ntexts");
-
-// set json header for Slack 
-// header('Content-Type: application/json');
-
-// convert theMessage to json so Slack can read it
-// $jsonMessage = json_encode(array("text" => 'hello')); 
-
-
-// return $jsonMessage;
-
-
-// return response()->json([
-// 	'level' => 'success',
-//     'text' => 'hello'  
-// ]);
-
-// echo $game_text; 
+$game_text = implode("\n", $games);
 
 return response()->json([
-    'text' => $whichMatches,
-    'attachments' => $arr
+    'text' => $game_text
+    // 'attachments' => $arr
 ]);
 
 
