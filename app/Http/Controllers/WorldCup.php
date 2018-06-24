@@ -154,7 +154,7 @@ $response = \Httpful\Request::get($uri)->send();
 
 $games = [];
 
-$games = [];
+
 
 foreach($response->body as $match){
 
