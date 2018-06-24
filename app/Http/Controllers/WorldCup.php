@@ -6,83 +6,83 @@ use Illuminate\Http\Request;
 
 class WorldCup extends Controller
 {
- 	public function test(){
- 		$apipath = config('services.slack.wc_api');
- 		$uri = "https://worldcup.sfg.io/matches/";
- 		$uri = $apipath;
- 		$response = \Httpful\Request::get($uri)->send();
+	public function test(){
+		$apipath = config('services.slack.wc_api');
+		$uri = "https://worldcup.sfg.io/matches/";
+		$uri = $apipath;
+		$response = \Httpful\Request::get($uri)->send();
 
-$games = [];
+		$games = [];
 
-foreach($response->body as $match){
+		foreach($response->body as $match){
 
-$matchstring = $match->home_team->country;
-$matchstring.= " "; 
+			$matchstring = $match->home_team->country;
+			$matchstring.= " "; 
 
-$home_goals = 0; 
-if(!empty($match->home_team->goals))
-	$home_goals = $match->home_team->goals;
+			$home_goals = 0; 
+			if(!empty($match->home_team->goals))
+				$home_goals = $match->home_team->goals;
 
-$matchstring.= '-<strong> '.$home_goals. '</strong>'; 
-
-
-
-$matchstring.= " v. "; 
-
-$away_goals = 0; 
-if(!empty($match->away_team->goals))
-	$away_goals = $match->away_team->goals;
-
-$matchstring.= '<strong>'.$away_goals. '</strong> - '; 
+			$matchstring.= '-<strong> '.$home_goals. '</strong>'; 
 
 
-$matchstring .= $match->away_team->country;
+
+			$matchstring.= " v. "; 
+
+			$away_goals = 0; 
+			if(!empty($match->away_team->goals))
+				$away_goals = $match->away_team->goals;
+
+			$matchstring.= '<strong>'.$away_goals. '</strong> - '; 
+
+
+			$matchstring .= $match->away_team->country;
 // $matchstring.= " "; 
 // $matchstring.= $match->away_team->goals;
 
 
-$matchstring.= "\n "; 
+			$matchstring.= "\n "; 
 
-array_push($games,$matchstring);
+			array_push($games,$matchstring);
 
 // array_push($games,$match);
 
-}
+		}
 
-	echo '<pre>';
- 		print_r($games); 
-echo '</pre>';
- 	}
-
-
-public function wcapi(Request $request)
+		echo '<pre>';
+		print_r($games); 
+		echo '</pre>';
+	}
 
 
-{
+	public function wcapi(Request $request)
 
 
-$command = $request->input('command');
-$token = $request->input('token');
-$text = $request->input('text');
+	{
 
 
-$slack_token = config('services.slack.token');
-
-$apipath = config('services.slack.wc_api');
-
-$nextEvent = $apipath;
-
-$todayEvent = 'today';
-
-$country = 'ARG'; 
-$countrycall = 'country?fifa_code=';
+		$command = $request->input('command');
+		$token = $request->input('token');
+		$text = $request->input('text');
 
 
-$currentEvent = 'current';
+		$slack_token = config('services.slack.token');
 
-$apipath = config('services.slack.wc_api');
+		$apipath = config('services.slack.wc_api');
 
-$uri = $apipath;
+		$nextEvent = $apipath;
+
+		$todayEvent = 'today';
+
+		$country = 'ARG'; 
+		$countrycall = 'country?fifa_code=';
+
+
+		$currentEvent = 'current';
+
+		$apipath = config('services.slack.wc_api');
+
+		$uri = $apipath;
 // $response = \Httpful\Request::get($uri)->send();
 
 // echo $command; 
@@ -91,27 +91,27 @@ $uri = $apipath;
 
 // echo $response; 
 
-if($token != $slack_token){ 
-	$msg = "This slash command is broken.";
-	die($msg);
-	echo $msg;
-}
+		if($token != $slack_token){ 
+			$msg = "This slash command is broken.";
+			die($msg);
+			echo $msg;
+		}
 
-else{
+		else{
 
 // a user can type "/cfp last" to get the last meetup and "/cfp next" to get the next upcoming meetup so here I am setting the text for string comparison 
 // $current = "current";
-$next = "next";
-$current = "current";
-$today = "today";
+			$next = "next";
+			$current = "current";
+			$today = "today";
 
 // whichMeetup holds the text value to be passed into the json output for slack 
 // here setting the default text to "Next Meetup"
-$whichMatches = "Upcoming Matches"; 
+			$whichMatches = "All Matches"; 
 
 // api call url set in intialize.php
 // default state of the api call is the next meetup
-$uri = $apipath;
+			$uri = $apipath;
 
 
 
@@ -123,17 +123,17 @@ $uri = $apipath;
 //   $uri = $apipath.$country.$text;
 // }
 
-// if(strcasecmp($text, $current) == 0)
-//   { 
-//   $uri = $apipath.$currentEvent;
-//   $whichMatches = "Current Matches";
-//   }
+			if(strcasecmp($text, $current) == 0)
+			{ 
+				$uri = $apipath.$currentEvent;
+				$whichMatches = "Current Matches";
+			}
 
-if(strcasecmp($text, $today) == 0)
-  { 
-  $uri = $apipath.$todayEvent;
-  $whichMatches = "Today's Matches";
-  }
+			if(strcasecmp($text, $today) == 0)
+			{ 
+				$uri = $apipath.$todayEvent;
+				$whichMatches = "Today's Matches";
+			}
 
 // if(strcasecmp($text, $next) == 0)
 //   { 
@@ -149,65 +149,64 @@ if(strcasecmp($text, $today) == 0)
 
 // using httpful.phar to get and parse JSON object from API 
 // http://phphttpclient.com
-$response = \Httpful\Request::get($uri)->send();
+			$response = \Httpful\Request::get($uri)->send();
 
-$games = [];
-
-
-
-foreach($response->body as $match){
-
-$matchstring = $match->home_team->country;
-$matchstring.= " "; 
-
-$home_goals = 0; 
-if(!empty($match->home_team->goals))
-	$home_goals = $match->home_team->goals;
-
-$matchstring.= '-* '.$home_goals. '*'; 
+			$games = [];
 
 
+			if(!empty($response->body)){
+				foreach($response->body as $match){
 
-$matchstring.= " v. "; 
+					//if it is to be determined, don't add it to the array
+					if($match->home_team->country !== "To Be Determined"){
+						$matchstring =  $match->home_team->country;
 
-$away_goals = 0; 
-if(!empty($match->away_team->goals))
-	$away_goals = $match->away_team->goals;
+						$matchstring.= " "; 
 
-$matchstring.= '*'.$away_goals. '* - '; 
+						$home_goals = 0; 
+						if(!empty($match->home_team->goals))
+							$home_goals = $match->home_team->goals;
 
-
-$matchstring .= $match->away_team->country;
-// $matchstring.= " "; 
-// $matchstring.= $match->away_team->goals;
-
-
-$matchstring.= "\n "; 
-
-array_push($games, $matchstring);
-
-// array_push($games,$match);
-
-}
-
-// for($response->body as $match){
-
-// array_push($games,$match->home_team);
-
-// }
+						$matchstring.= '-* '.$home_goals. '*'; 
 
 
 
-$game_text = implode("\n", $games);
+						$matchstring.= " v. "; 
 
-// // creating slack json attachments array
-  $arr = array("title" => "Matches",
-   "text" => $game_text);
+						$away_goals = 0; 
+						if(!empty($match->away_team->goals))
+							$away_goals = $match->away_team->goals;
 
-return response()->json([
-	'text' => $whichMatches,
-    'attachments' => array($arr)
-]);
+						$matchstring.= '*'.$away_goals. '* - '; 
+
+
+						$matchstring .= $match->away_team->country;
+
+
+
+						$matchstring.= "\n "; 
+
+						array_push($games, $matchstring);
+					}
+
+
+
+				}
+
+			}
+
+
+
+			$game_text = implode("\n", $games);
+
+			// creating slack json attachments array
+			$arr = array("title" => "Scores",
+				"text" => $game_text);
+
+			return response()->json([
+				'text' => $whichMatches,
+				'attachments' => array($arr)
+			]);
 
 
 // echo $jsonMessage;
