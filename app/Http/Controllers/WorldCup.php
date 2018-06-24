@@ -137,7 +137,10 @@ public function parseResponse($games, $response){
 					//if it is to be determined, don't add it to the array
 					if($match->home_team->country !== "To Be Determined"){
 
-						$matchstring = ":soccer: "."_".$match->location."_"."\n"; 
+						
+						$matchstring = ":trophy:";
+
+						$matchstring .= ":stadium: "."_".$match->location."_"."\n"; 
 
 						$gme_date = $match->datetime; 
 						date_default_timezone_set('America/New_York');
@@ -146,7 +149,7 @@ public function parseResponse($games, $response){
 						
 						$matchstring.= "*".$game_date . "*\n"; 
 						
-						$matchstring.=  $match->home_team->country;
+						$matchstring.=  ":soccer: ".$match->home_team->country;
 
 						$matchstring.= " "; 
 
@@ -167,7 +170,7 @@ public function parseResponse($games, $response){
 						$matchstring.= '*'.$away_goals. '* - '; 
 
 
-						$matchstring .= $match->away_team->country;
+						$matchstring .= $match->away_team->country." :soccer:";
 
 
 
