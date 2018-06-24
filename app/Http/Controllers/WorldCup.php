@@ -153,6 +153,30 @@ class WorldCup extends Controller
 
 			$games = [];
 
+			$games = parseResponse($response); 
+
+
+			$game_text = implode("\n", $games);
+
+			// creating slack json attachments array
+			$arr = array("title" => "Scores",
+				"text" => $game_text);
+
+			return response()->json([
+				'text' => $whichMatches,
+				'attachments' => array($arr)
+			]);
+
+
+// echo $jsonMessage;
+} //close slack check else
+
+
+} // close function 
+
+public function parseResponse($response){
+
+
 
 			if(!empty($response->body)){
 				foreach($response->body as $match){
@@ -195,25 +219,9 @@ class WorldCup extends Controller
 
 			}
 
+			return $games; 
 
-
-			$game_text = implode("\n", $games);
-
-			// creating slack json attachments array
-			$arr = array("title" => "Scores",
-				"text" => $game_text);
-
-			return response()->json([
-				'text' => $whichMatches,
-				'attachments' => array($arr)
-			]);
-
-
-// echo $jsonMessage;
-} //close slack check else
-
-
-}
+} // close parse response
 
 
  } //close class
