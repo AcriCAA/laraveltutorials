@@ -224,7 +224,10 @@ array_push($games,$matchstring);
 // //grab the city where the event is being held 
 // $placeCity = $response->body[0]->venue->city; 
 
-
+foreach ($games as $game) {
+	$game_text = $game;	
+	$game_text.= "\n" 
+}
 
 
 // // creating slack json attachments array
@@ -257,7 +260,7 @@ array_push($games,$matchstring);
 
 return response()->json([
     'text' => $whichMatches,
-    'attachments' => $games
+    'attachments' => $game_text
 ]);
 
 
