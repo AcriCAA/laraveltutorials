@@ -24,6 +24,12 @@ Route::get('/login/slack', function(){
         ->redirect();
 });
 
+Route::get('/slack/install/worldcupgamesslash', function(){
+    return Socialite::with('slack')
+        ->scopes(['commands'])
+        ->redirect();
+});
+
 Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
     $response = $httpClient->post('https://slack.com/api/oauth.access', [
         'headers' => ['Accept' => 'application/json'],
@@ -35,7 +41,12 @@ Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
         ]
     ]);
 
-    echo 'App installed'; 
+    echo '
+    <h1>Slack World Cup Slash Command Installed!</h1>
+    <h4>by: Corey Acri</h4>
+    <h2>Slack World Cup App installed!</h2>
+    <h3>To use:</h3>
+    <p>type <code>/games</code> plus <code>current </code><code>today </code>or<code>all </code></p>'; 
 
     // return $response; 
     // $return_response = json_decode($response->getBody());
