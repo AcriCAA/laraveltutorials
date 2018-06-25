@@ -22,6 +22,26 @@
 Route::get('/wc', 'WorldCup@test');
 Route::post('/worldcup', 'WorldCup@wcapi');
 
+
+Route::get('/login/slack', function(){
+    return Socialite::with('slack')
+        ->scopes(['bot'])
+        ->redirect();
+});
+Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
+    $response = $httpClient->post('https://slack.com/api/oauth.access', [
+        'headers' => ['Accept' => 'application/json'],
+        'form_params' => [
+            'client_id' => env('SLACK_KEY'),
+            'client_secret' => env('SLACK_SECRET'),
+            'code' => $_GET['code'],
+            'redirect_uri' => env('SLACK_REDIRECT_URI'),
+        ]
+    ]);
+    $bot_token = json_decode($response->getBody())->bot->bot_access_token;
+    echo "Your Bot Token is: ". $bot_token. " place it inside your .env as SLACK_TOKEN";
+});
+
 // this is setting the url from urlroot/
 // Route::get('/tasks', 'TasksController@index');
 

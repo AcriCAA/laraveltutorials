@@ -12,11 +12,23 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array
      */
-    protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
-        ],
-    ];
+    // protected $listen = [
+    //     'App\Events\Event' => [
+    //         'App\Listeners\EventListener',
+    //     ],
+    // ];
+
+    /**
+ * The event handler mappings for the application.
+ *
+ * @var array
+ */
+protected $listen = [
+    \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+        // add your listeners (aka providers) here
+        'Mpociot\Socialite\Slack\SlackExtendSocialite@handle',
+    ],
+];
 
     /**
      * Register any events for your application.

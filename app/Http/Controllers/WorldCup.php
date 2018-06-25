@@ -171,7 +171,7 @@ public function parseResponse($games, $response){
 						$game_date = date('M d, Y g a', strtotime($gme_date)); 
 						
 						
-						$matchstring.= "*".$game_date. " *\n"; 
+						$matchstring.= "*".$game_date. " (EST)*\n"; 
 						
 						$matchstring.=  ":soccer: ".$match->home_team->country;
 
