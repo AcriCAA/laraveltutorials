@@ -49,8 +49,12 @@ Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
             'redirect_uri' => env('SLACK_REDIRECT_URI'),
         ]
     ]);
-    $bot_token = json_decode($response->getBody())->bot->bot_access_token;
-    echo "Your Bot Token is: ". $bot_token. " place it inside your .env as SLACK_TOKEN";
+
+    return $response; 
+    // $return_response = json_decode($response->getBody());
+    // return $return_response; 
+    // $bot_token = json_decode($response->getBody())->bot->bot_access_token;
+    // echo "Your Bot Token is: ". $bot_token. " place it inside your .env as SLACK_TOKEN";
 });
 
 // this is setting the url from urlroot/
