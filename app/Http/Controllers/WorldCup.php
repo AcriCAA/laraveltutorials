@@ -35,7 +35,7 @@ class WorldCup extends Controller
     	$returnstring = "HTTP 200 OK\nContent-type: text/plain\n".$payload->get('challenge');
 
         
-    	return $returnstring
+    	return $returnstring;
         
 
         
