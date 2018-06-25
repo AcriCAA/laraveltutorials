@@ -25,6 +25,24 @@ class WorldCup extends Controller
 
 	}
 
+	public function slackChallenge(Request $request){
+
+		
+		  $payload = $request->json();
+
+    if ($payload->get('type') === 'url_verification') {
+        
+    	return response()->json([
+				$payload->get('challenge')
+			]);
+        
+
+        
+    }
+
+
+	}
+
 
 	public function wcapi(Request $request)
 

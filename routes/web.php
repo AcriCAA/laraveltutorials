@@ -22,16 +22,7 @@
 Route::get('/wc', 'WorldCup@test');
 Route::post('/worldcup', 'WorldCup@wcapi');
 
-Route::post('/slack', function(\Illuminate\Http\Request $request){
-
-    $payload = $request->json();
-
-    if ($payload->get('type') === 'url_verification') {
-        return $payload->get('challenge');
-    }
-
-   //challenge
-}); 
+Route::post('/slack', 'WorldCup@slackChallenge'); 
 
 Route::get('/login/slack', function(){
     return Socialite::with('slack')
