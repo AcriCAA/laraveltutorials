@@ -35,6 +35,8 @@ Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
         ]
     ]);
 
+    echo 'App installed'; 
+
     // return $response; 
     // $return_response = json_decode($response->getBody());
     // return $return_response; 
