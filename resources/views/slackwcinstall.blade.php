@@ -9,12 +9,13 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #cc0000;
+                color: white;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -50,7 +51,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: white;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -65,46 +66,53 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+            <div class="container-fluid">
+                <div class="row mt-5">
+                    <div class="col-sm">
+                                <h1 class="text-center mt-5">Slack World Cup Slash Command</h1>
+                    </div>
                 </div>
-            @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    SUCCESS!
-                </div>
-<div class="m-b-md">
-    <h1>Slack World Cup Slash Command Installed!</h1>
-    <h4>by: <em><a href="http://www.coreyacri.com">Corey Acri</a></em></h4>
-    <h2>Slack World Cup App installed!</h2>
-    
-    
-<p>Instructions</p>
+
+                 <div class="row mt-5">
+                    <div class="col-sm-12 col-md-8 col-lg-8">
+                   
+                                <img src="http://coreyacri.net/work/slackexamplecropped.png" class="img-fluid"/>
+                    </div>
+                
+
+                                
+                     <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+
+                        <h2>World Cup updates with a slash command</h2>
+                        
+                        <p><a href="https://slack.com/oauth/authorize?client_id=76083133201.386216728352&scope=commands"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a></p>
+                        <p>Usage</p>
 
 <ul>
 <li>use <code>/games current</code> to get the current games being played</li>
 <li>use <code>/games today</code> to get the day's games</li>
 <li>use <code>/games all</code> to get all the games played</li>
 <li>use <code>/games ARG</code> (any three letter country abbreviation) for a countries</li>
-
 </ul>
-</div>
 
-                <div class="links">
-                    <a href="http://www.coreyacri.com/work/">Corey Acri</a>
-                    <a href="http://agstrategic.design/case-studies/">AG Strategic Design</a>
-    
+                        
+                    </div>
                 </div>
+                
+
+                <div class="row mt-5 p-5">
+                    <div class="col-sm">
+                                <div class="links text-center">
+                                    <a href="http://www.coreyacri.com/work/">Corey Acri</a>
+                                    <a href="http://agstrategic.design/case-studies/">AG Strategic Design</a>
+                                </div>
+                    </div>
+                </div>
+
+
             </div>
-        </div>
+         
     </body>
 </html>
 

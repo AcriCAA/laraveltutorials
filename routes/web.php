@@ -15,6 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/slack/installpage', function () {
+    return view('slackwcinstall');
+});
+
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+
+
+
+
 Route::get('success','WorldCup@success'); 
 
 Route::get('/wc', 'WorldCup@test');
