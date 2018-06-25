@@ -75,14 +75,15 @@
 
 
                  <div class="row mt-5">
-                    <div class="col-sm-12 col-md-8 col-lg-8">
-                   
-                                <img src="http://coreyacri.net/work/slackexamplecropped.png" class="img-fluid"/>
+                    <div class="col-sm-12 col-md-7 col-lg-7">
+                   <div class="px-5">
+                              <a href="https://slack.com/oauth/authorize?client_id=76083133201.386216728352&scope=commands"><img src="http://coreyacri.net/work/wc_slash.gif" class="img-fluid"/></a>
+                            </div>
                     </div>
                 
 
                                 
-                     <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                     <div class="col-sm-12 col-md-5 col-lg-5 pt-3">
 
                         <h2>World Cup updates with a slash command</h2>
                         
