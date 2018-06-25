@@ -16,14 +16,15 @@
     <body>
         <div class="flex-center position-ref full-height">
             
-            <ul>
-                @foreach ($tasks as $task)
-                
-                <li>
-                    {{ $task->body }}
-                </li>
-                @endforeach
-            </ul>
+           <div class="block" style="height: 600px;">
+    
+    
+      
+                <p><a href="http://www.coreyacri.com"><img class="percent-40" src="https://avatars0.githubusercontent.com/u/4731092?v=3&s=460"/></a></p>
+                    <h1 class="c-font">COREY ACRI</h1>
+            </div>
+    
+    </div>
 
         </div>
     </body>
