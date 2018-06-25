@@ -27,14 +27,15 @@ class WorldCup extends Controller
 
 	public function slackChallenge(Request $request){
 
-		
+
 		  $payload = $request->json();
 
     if ($payload->get('type') === 'url_verification') {
+
+    	$returnstring = "HTTP 200 OK\nContent-type: text/plain\n".$payload->get('challenge');
+
         
-    	return response()->json([
-				$payload->get('challenge')
-			]);
+    	return $returnstring
         
 
         
