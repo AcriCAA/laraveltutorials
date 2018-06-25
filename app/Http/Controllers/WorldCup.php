@@ -25,6 +25,13 @@ class WorldCup extends Controller
 
 	}
 
+	 public function success (){
+
+
+    	return view('success'); 
+
+    }
+
     /*|--------------------------------------------------------------------------
     | World Cup API queries (Corey Acri @AcriCAA)
     |--------------------------------------------------------------------------
@@ -32,6 +39,10 @@ class WorldCup extends Controller
     | This queries Software for Good's World Cup API (http://worldcup.sfg.io
     |
     */
+
+	
+
+
 
 	public function wcapi(Request $request)
 
