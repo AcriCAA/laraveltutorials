@@ -43,16 +43,11 @@ Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
 
     echo '
     <h1>Slack World Cup Slash Command Installed!</h1>
-    <h4>by: Corey Acri</h4>
+    <h4>by: <em><a href="http://www.coreyacri.com">Corey Acri</a></em></h4>
     <h2>Slack World Cup App installed!</h2>
     <h3>To use:</h3>
     <p>type <code>/games</code> plus <code>current </code><code>today </code>or<code>all </code></p>'; 
 
-    // return $response; 
-    // $return_response = json_decode($response->getBody());
-    // return $return_response; 
-    // $bot_token = json_decode($response->getBody())->bot->bot_access_token;
-    // echo "Your Bot Token is: ". $bot_token. " place it inside your .env as SLACK_TOKEN";
 });
 
 // this is setting the url from urlroot/
