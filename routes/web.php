@@ -22,7 +22,17 @@
 Route::get('/wc', 'WorldCup@test');
 Route::post('/worldcup', 'WorldCup@wcapi');
 
+Route::post('/slack', function(\Illuminate\Http\Request $request){
 
+    $payload = $request->json();
+
+    if ($payload->get('type') === 'url_verification') {
+        return $payload->get('challenge');
+    }
+
+    // Bot logic will be placed here
+}
+    
 Route::get('/login/slack', function(){
     return Socialite::with('slack')
         ->scopes(['bot'])
