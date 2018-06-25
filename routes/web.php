@@ -30,14 +30,15 @@ Route::post('/slack', function(\Illuminate\Http\Request $request){
         return $payload->get('challenge');
     }
 
-    // Bot logic will be placed here
-}
-    
+   //challenge
+}); 
+
 Route::get('/login/slack', function(){
     return Socialite::with('slack')
         ->scopes(['bot'])
         ->redirect();
 });
+
 Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
     $response = $httpClient->post('https://slack.com/api/oauth.access', [
         'headers' => ['Accept' => 'application/json'],
