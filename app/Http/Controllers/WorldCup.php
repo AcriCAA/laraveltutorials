@@ -55,18 +55,12 @@ class WorldCup extends Controller
 		$apipath = config('services.slack.wc_api');
 
 		$uri = $apipath;
-// $response = \Httpful\Request::get($uri)->send();
 
-// echo $command; 
-// echo $text;
-// echo $token; 
-
-// echo $response; 
 
 		if($token == $slack_token || $token == $slack_token_cfp){ 
 		
 
-// a user can type to get the last meetup and "/cfp next" to get the next upcoming meetup so here I am setting the text for string comparison 
+// a user can type to get the today's games, all games or the current game(s)
 // $current = "current";
 			$next = "next";
 			$current = "current";
@@ -78,7 +72,7 @@ class WorldCup extends Controller
 
 
 // default state of the api call
-$uri = $apipath;
+			$uri = $apipath;
 
 
 
@@ -125,7 +119,7 @@ $uri = $apipath;
 
 			}
 			else 
-				$arr = array("title" => "No Games Right Now");
+				$arr = array("title" => "Sorry, no games right now");
 
 			return response()->json([
 				'text' => $whichMatches,
@@ -133,7 +127,6 @@ $uri = $apipath;
 			]);
 
 
-// echo $jsonMessage;
 } //close slack check if
 		else{
 	$msg = "This slash command is broken.";
