@@ -35,7 +35,7 @@ Route::post('/worldcup', 'WorldCup@wcapi');
 
 Route::get('/login/slack', function(){
     return Socialite::with('slack')
-        ->scopes(['bot'])
+        ->scopes(['commands'])
         ->redirect();
 });
 
