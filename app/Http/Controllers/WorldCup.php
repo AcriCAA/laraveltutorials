@@ -25,25 +25,13 @@ class WorldCup extends Controller
 
 	}
 
-	public function slackChallenge(Request $request){
-
-
-		  $payload = $request->json();
-
-    if ($payload->get('type') === 'url_verification') {
-
-    	$returnstring = "HTTP 200 OK\nContent-type: text/plain\n".$payload->get('challenge');
-
-        
-    	return $returnstring;
-        
-
-        
-    }
-
-
-	}
-
+    /*|--------------------------------------------------------------------------
+    | World Cup API queries (Corey Acri @AcriCAA)
+    |--------------------------------------------------------------------------
+    |
+    | This queries Software for Good's World Cup API (http://worldcup.sfg.io
+    |
+    */
 
 	public function wcapi(Request $request)
 
