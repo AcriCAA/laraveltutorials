@@ -198,7 +198,7 @@ public function parseResponse($games, $response){
 
 
 						if(!empty($match->time)){
-						$matchstring.= "\n "; 
+						$matchstring.= "\n"; 
 						$matchstring .= ":clock1: "."`".$match->time."`";						
 						$matchstring.= "\n "; 
 						}
@@ -210,6 +210,9 @@ public function parseResponse($games, $response){
 						$date = date('M d, Y g a', strtotime($dte)); // 2018-01-05
 						$matchstring.= "_"."Last Update: ".$date . "_"."\n\n"; 
 						}
+						else
+							$matchstring.= "\n\n"; 
+
 						
 
 
