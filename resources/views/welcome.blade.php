@@ -83,8 +83,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="http://www.coreyacri.com">Corey Acri</a>
-                    <a href="http://agstrategic.design">AG Strategic Design</a>
+                    <a href="http://www.coreyacri.com/work/">Corey Acri</a>
+                    <a href="http://agstrategic.design/case-studies/">AG Strategic Design</a>
     
                 </div>
             </div>
