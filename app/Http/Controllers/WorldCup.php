@@ -126,7 +126,7 @@ class WorldCup extends Controller
 
 			}
 			else 
-				$arr = array("title" => "Sorry, no games right now");
+				$arr = array("title" => ":frowning: Sorry, no games to report right now. Try `/games today` or `/games all` instead");
 
 			return response()->json([
 				'text' => $whichMatches,
