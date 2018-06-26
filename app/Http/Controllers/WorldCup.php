@@ -23,6 +23,16 @@ class WorldCup extends Controller
 		echo '</pre>';
 		}
 
+		$arr = array("title" => "Games",
+				"author_name" => "Match information from World Cup API by Software for Good",
+            "author_link" => "http://worldcup.sfg.io",
+            "text" => "game text",
+			"footer" => "World Cup Slash Command by Corey @ AG Strategic Design | http://agstrategic.design/");
+		return response()->json([
+				'text' => 'jsontext',
+				'attachments' => array($arr)
+			]);
+
 	}
 
 	 public function success (){
@@ -133,11 +143,17 @@ class WorldCup extends Controller
 
 			// creating slack json attachments array
 			$arr = array("title" => "Games",
-				"text" => $game_text);
+				"author_name" => "Match information from World Cup API by Software for Good",
+            "author_link" => "http://worldcup.sfg.io",
+            "text" => $game_text,
+			"footer" => "World Cup Slash Command by Corey @ AG Strategic Design | http://agstrategic.design/");
 
 			}
 			else 
-				$arr = array("title" => ":frowning: Sorry, no games to report right now. Try `/games today` or `/games all` instead");
+				$arr = array("title" => ":frowning: Sorry, no games to report right now. Try `/games today` or `/games all` instead",
+			"author_name" => "Match information from World Cup API by Software for Good",
+            "author_link" => "http://worldcup.sfg.io",
+			"footer" => "World Cup Slash Command by Corey @ AG Strategic Design | http://agstrategic.design/");
 
 			return response()->json([
 				'text' => $whichMatches,
