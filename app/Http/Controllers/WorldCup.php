@@ -86,6 +86,21 @@ class WorldCup extends Controller
 
 
 		if($token == $slack_token || $token == $slack_token_cfp){ 
+
+
+			if(strcasecmp($text, 'help') == 0) {
+
+				echo "This uses Software For Good\'s World Cup API \(http:\/\/worldcup.sfg.io) to deliver the day\'s games.
+
+					\n- use `/games current` to get the current games being played
+					\n- use `/games today` to get the day\'s games
+					\n- use `/games all` to get all the games played
+					\n- use `/games ARG` (any three letter country abbreviation) for a countries";
+
+
+			}
+
+		else{
 		
 
 // a user can type to get the today's games, all games or the current game(s)
@@ -160,8 +175,9 @@ class WorldCup extends Controller
 				'attachments' => array($arr)
 			]);
 
+		}// close help else
 
-} //close slack check if
+		} //close slack check if
 		else{
 	$msg = "This slash command is broken.";
 			die($msg);
