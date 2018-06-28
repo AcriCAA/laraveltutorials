@@ -236,7 +236,7 @@ public function parseResponse($games, $response){
 						if(!empty($match->time)){
 						$matchstring.= "\n"; 
 						$matchstring .= ":clock1: "."`".$match->time."`";						
-						$matchstring.= "\n "; 
+						$matchstring.= "\n"; 
 
 						$matchstring .= ":stadium: "."_".$match->location."_"."\n"; 
 
