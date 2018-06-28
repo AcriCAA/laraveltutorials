@@ -90,7 +90,7 @@ class WorldCup extends Controller
 
 			if(strcasecmp($text, 'help') == 0) {
 
-				echo "This uses Software For Good\'s World Cup API \(http:\/\/worldcup.sfg.io) to deliver the day\'s games.
+				echo "This uses Software For Good's World Cup API (http://worldcup.sfg.io) to deliver the day's games.
 
 					\n- use `/games current` to get the current games being played
 					\n- use `/games today` to get the day\'s games
