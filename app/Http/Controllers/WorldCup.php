@@ -207,16 +207,9 @@ public function parseResponse($games, $response){
 						
 
 
-						$matchstring = ":stadium: "."_".$match->location."_"."\n"; 
-
-						$gme_date = $match->datetime; 
-						date_default_timezone_set('America/New_York');
-						$game_date = date('M d, Y g a', strtotime($gme_date)); 
 						
 						
-						$matchstring.= ":calendar: "."*".$game_date. " (EST)*\n"; 
-						
-						$matchstring.=  ":soccer: ".$match->home_team->country;
+						$matchstring=  ":soccer: ".$match->home_team->country;
 
 						$matchstring.= " "; 
 
@@ -244,6 +237,15 @@ public function parseResponse($games, $response){
 						$matchstring.= "\n"; 
 						$matchstring .= ":clock1: "."`".$match->time."`";						
 						$matchstring.= "\n "; 
+
+						$matchstring .= ":stadium: "."_".$match->location."_"."\n"; 
+
+						$gme_date = $match->datetime; 
+						date_default_timezone_set('America/New_York');
+						$game_date = date('M d, Y g a', strtotime($gme_date)); 
+						
+						
+						$matchstring.= ":calendar: "."*".$game_date. " (EST)*\n"; 
 						}
 						
 
