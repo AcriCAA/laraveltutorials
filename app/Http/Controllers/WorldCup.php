@@ -8,7 +8,7 @@ class WorldCup extends Controller
 {
 	public function test(){
 		$apipath = config('services.slack.wc_api');
-		$uri = "https://worldcup.sfg.io/matches/";
+		$uri = "https://worldcup.sfg.io/matches/today";
 		
 		$response = \Httpful\Request::get($uri)->send();
 
@@ -238,6 +238,8 @@ public function parseResponse($games, $response){
 						$matchstring .= ":clock1: "."`".$match->time."`";						
 						$matchstring.= "\n"; 
 
+						}
+
 						$matchstring .= ":stadium: "."_".$match->location."_"."\n"; 
 
 						$gme_date = $match->datetime; 
@@ -246,7 +248,7 @@ public function parseResponse($games, $response){
 						
 						
 						$matchstring.= ":calendar: "."*".$game_date. " (EST)*\n"; 
-						}
+						
 						
 
 						if(null !== $match->last_event_update_at){
