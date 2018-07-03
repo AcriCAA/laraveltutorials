@@ -60,6 +60,17 @@
                 text-transform: uppercase;
             }
 
+
+            a {
+                color: white;
+                padding: 0 10px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -97,10 +108,18 @@
 <li>use <code>/games ARG</code> (any three letter country abbreviation) for a countries</li>
 </ul>
 
+
                         
                     </div>
                 </div>
                 
+                <div class="row">
+                    <div class="col-sm m-5">
+                        <h3>Support</h3>
+<p>Email <a href="mailto:support@agstrategic.design">support@agstrategic.design</a> with any questions.</p>
+
+                    </div>
+                </div>
 
                 <div class="row mt-5 p-5">
                     <div class="col-sm">
