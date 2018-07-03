@@ -104,7 +104,7 @@ class WorldCup extends Controller
 			echo "Sorry, you must select a command. \n- use `/games current` to get the current games being played
 					\n- use `/games today` to get the day's games
 					\n- use `/games all` to get all the games played
-					\n- use `/games ARG` (any three letter country abbreviation) for a countries"
+					\n- use `/games ARG` (any three letter country abbreviation) for a countries";
 
 
 		}
