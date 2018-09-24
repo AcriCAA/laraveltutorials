@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layout')
 
 
 @section('content')
@@ -13,7 +13,7 @@
 
         	<h1>Publish a Post</h1>
 
-@include('layouts.partials.errors')
+
 
 <div class="form-group">
 <form method="POST" action="/posts">
