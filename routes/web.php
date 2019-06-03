@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/createfeed', 'CSHLFeedController@testForm'); 
+
+Route::post('/cshl', 'CSHLFeedController@testResponse');  
+
+
 Route::get('/slack/installpage', function () {
     return view('slackwcinstall');
 });
@@ -65,12 +70,19 @@ Route::get('/connect/slack', function(\GuzzleHttp\Client $httpClient){
 
 });
 
+Route::get('/newpost', 'PostsController@create2'); 
+
+// Route::post('/postpost', 'CSHLFeedController@test'); 
+
+// Route::post('/postpost', 'CSHLFeedController@testRes'); 
+
 
 Route::get('/feed', 'FeedController@show');
 
 Route::get('/directions', 'FeedController@directions');
 
-Route::post('/cshl', 'CSHLFeedController@testResponse');    
+
+
 
 
 Route::get('/map', function(){

@@ -8,6 +8,12 @@ class CSHLFeedController extends Controller
 {
     //
 
+public function test (Request $request) {
+
+	echo '<pre>';
+	var_dump($request);
+	echo '</pre>';
+}
 
 public function testResponse(Request $request) {
 	$token = '8ca38bd95465d41cd464a4ade013d040479e7b4c892a8f14300359e2fbb799e0';
@@ -94,6 +100,19 @@ public function testResponse(Request $request) {
 	}
 
 	return json_encode($response);
+}
+
+
+public function testForm(){
+
+	return view('posts.createfeed'); 
+
+}
+
+public function testGenericResponse(){
+
+return response()->json("success");
+
 }
 
 

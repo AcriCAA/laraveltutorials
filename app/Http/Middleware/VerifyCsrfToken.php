@@ -14,8 +14,8 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [ 
 
    	'worldcup', 
-    'api/cshl', 
-    'cshl'
+    'api/*', 
+    'cshl', 
         //
     ];
 }

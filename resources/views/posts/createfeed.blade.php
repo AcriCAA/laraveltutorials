@@ -11,34 +11,24 @@
 
         <div class="col-sm-8 blog-main">
 
-        	<h1>Publish a Post</h1>
+          <h1>Publish a Post</h1>
 
 
 
 <div class="form-group">
-<form method="POST" action="/postpost">
+<form method="POST" action="/cshl">
 
 {{-- include csrf field in all of our forms for authentication --}}
-	 {{ csrf_field() }}
+   {{ csrf_field() }}
 
 
   <div class="form-group">
-    <label for="title">Title: </label>
+    <label for="title">Token: </label>
     <input type="text" class="form-control" id="title" name="title" required >
   </div>
 
 
-  <div class="form-group">
-    <label for="body">Request</label>
-    <textarea type="text" class="form-control" id="body" name="body" required ></textarea>
-  </div>
-
-  <div class="form-group">
-    <label for="client">Request</label>
-    <textarea type="text" class="form-control" id="client" name="client" required ></textarea>
-  </div>
-
-</div>
+  
 
 <div class="form-group">
 
