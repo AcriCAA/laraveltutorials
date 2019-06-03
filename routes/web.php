@@ -70,6 +70,8 @@ Route::get('/feed', 'FeedController@show');
 
 Route::get('/directions', 'FeedController@directions');
 
+Route::post('/cshl', 'CSHLFeedController@testResponse');    
+
 
 Route::get('/map', function(){
 
