@@ -9,7 +9,7 @@ class CSHLFeedController extends Controller
     //
 
 
-public function testResponse() {
+public function testResponse(Request $request) {
 	$token = '8ca38bd95465d41cd464a4ade013d040479e7b4c892a8f14300359e2fbb799e0';
 
 
