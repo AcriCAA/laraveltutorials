@@ -17,7 +17,7 @@ public function test (Request $request) {
 
 public function logPost(Request $request){
 
-	\Log::info(print_r($request)); 
+	\Log::info($request); 
 }
 
 public function testResponse(Request $request) {
