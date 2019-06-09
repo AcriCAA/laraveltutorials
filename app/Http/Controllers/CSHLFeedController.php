@@ -57,7 +57,7 @@ public function returnFeed(Request $request){
 		'id' => 'PCD-19',
 		'calendar_code' => 'PCD',
 		'year_code' => '19',
-		'title' => 'Cell Death',
+		'title' => 'Cell Death (test 2)',
 		'abstract_deadline' => '2019-05-24',
 		'registration_url' => 'https://meetings.cshl.edu/meetingsregistration.aspx?meet=PCD&year=19',
 		'abstracts_url' => 'https://meetings.cshl.edu/abstracts.aspx?meet=PCD&year=19',
@@ -72,7 +72,7 @@ public function returnFeed(Request $request){
 		'id' => 'TUMBIO-19',
 		'calendar_code' => 'TUMBIO',
 		'year_code' => '19',
-		'title' => 'Biology of Cancer: Microenvironment & Metastasis',
+		'title' => 'TestBiology of Cancer: Microenvironment & Metastasis',
 		'abstract_deadline' => '2019-07-05',
 		'registration_url' => 'https://meetings.cshl.edu/meetingsregistration.aspx?meet=TUMBIO&year=19',
 		'abstracts_url' => 'https://meetings.cshl.edu/abstracts.aspx?meet=TUMBIO&year=19',
@@ -92,6 +92,9 @@ public function returnFeed(Request $request){
 			));
 		}
 
+
+	else{
+
 		$message = (!$postFields['last_updated']) ? 'First call to this endpoint' : 'Prior update performed: '.$postFields['last_updated'];
 		$response = array(
 			'status' => 'ok',
@@ -99,12 +102,7 @@ public function returnFeed(Request $request){
 			'messages' => array( $message ),
 		);
 
-	} else {
-		$response = array(
-			'status' => 'error',
-			'messages' => array('Invalid request method: '.$_SERVER['REQUEST_METHOD'].'.'),
-		);
-	}
+ }
 
 	return json_encode($response);
 
