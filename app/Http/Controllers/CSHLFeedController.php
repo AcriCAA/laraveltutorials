@@ -24,7 +24,7 @@ public function logPost(Request $request){
 public function returnFeed(Request $request){
 
 	// \Log::info($request->getContents()); 
-	$postFields = $request->getBody()->getContents();
+	$postFields = $request;
 
 	\Log::info($postFields); 
 
