@@ -15,7 +15,16 @@ public function test (Request $request) {
 	echo '</pre>';
 }
 
+public function logPost(Request $request){
+
+	\Log::info(print_r($request)); 
+}
+
 public function testResponse(Request $request) {
+
+	$request = json_encode($request); 
+
+
 	$token = '8ca38bd95465d41cd464a4ade013d040479e7b4c892a8f14300359e2fbb799e0';
 
 
@@ -109,9 +118,14 @@ public function testForm(){
 
 }
 
-public function testGenericResponse(){
+public function testGenericResponse(Request $request){
 
-return response()->json("success");
+$post = json_encode($request);
+
+print_r($post);  
+
+// return $post; 
+// return response()->json("success");
 
 }
 
