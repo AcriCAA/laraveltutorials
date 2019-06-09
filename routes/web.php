@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/createfeed', 'CSHLFeedController@testForm'); 
 
-Route::post('/cshl', 'CSHLFeedController@logPost');  
+Route::post('/cshl', 'CSHLFeedController@returnFeed');  
 
 
 Route::get('/slack/installpage', function () {
