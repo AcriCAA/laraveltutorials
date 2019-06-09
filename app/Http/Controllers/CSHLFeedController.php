@@ -17,14 +17,14 @@ public function test (Request $request) {
 
 public function logPost(Request $request){
 
-	\Log::info($request->getContents()); 
+	\Log::info($response->getBody()->getContents()); 
 }
 
 
 public function returnFeed(Request $request){
 
 	// \Log::info($request->getContents()); 
-	$postFields = $request->getContents(); 
+	$postFields = $response->getBody()->getContents();
 
 	\Log::info($postFields); 
 
