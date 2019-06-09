@@ -30,7 +30,7 @@ public function returnFeed(Request $request){
 
 
 
-	$token = '465a7fc287e89a04a2232d9c1eddf07e5101611396fe06eee9266eca6b6f1eef';
+	$token = '4729b01885ba5d80a81dc262e31b09b17ad4afa0214f8594e9f2b80bb25337ed';
 
 
 	// Demo Results
