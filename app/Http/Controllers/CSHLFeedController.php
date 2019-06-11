@@ -49,7 +49,7 @@ public function returnFeedBooks(Request $request){
 </div>', 
 		'isbn' => '978-1-621821-05-2 ', 
 		'publication_date' => 'January 1, 2044', 
-		'image_url' => 'https://www.cshlpress.com/image.tpl?img=restrictionenz_f.jpg'
+		'image_url' => 'https://www.cshlpress.com/productgraphics/big/restrictionenz_f.jpg'
 
 		);
 
@@ -65,7 +65,7 @@ public function returnFeedBooks(Request $request){
 		'contents' => 'contents', 
 		'isbn' => '978-1-621822-79-0', 
 		'publication_date' => 'January 1, 3022', 
-		'image_url' => 'https://www.cshlpress.com/image.tpl?img=funcdyscochlea_f.jpg' 
+		'image_url' => 'https://www.cshlpress.com/productgraphics/big/funcdyscochlea_f.jpg' 
 
 		);
 
@@ -85,7 +85,7 @@ public function returnFeedBooks(Request $request){
 		'isbn' => '978-1-621821-13-7', 
 		'publication_date' => 'Janauary 22, 2222', 
 
-		'image_url' => 'https://cshlpress.com/image.tpl?img=nextgenseqmed_f.jpg'
+		'image_url' => 'https://www.cshlpress.com/productgraphics/big/nextgenseqmed_f.jpg'
 		
 
 		
