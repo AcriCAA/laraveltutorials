@@ -15,7 +15,8 @@ class VerifyCsrfToken extends BaseVerifier
 
    	'worldcup', 
     'api/*', 
-    'cshl', 
+    'cshl',
+    'cshlbooks' 
         //
     ];
 }
