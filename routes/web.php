@@ -19,6 +19,8 @@ Route::get('/createfeed', 'CSHLFeedController@testForm');
 
 Route::post('/cshl', 'CSHLFeedController@returnFeed');  
 
+Route::post('/cshlbooks', 'CSHLFeedController@returnFeedBooks');  
+
 
 Route::get('/slack/installpage', function () {
     return view('slackwcinstall');

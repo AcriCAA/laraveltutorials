@@ -21,6 +21,103 @@ public function logPost(Request $request){
 }
 
 
+public function returnFeedBooks(Request $request){
+
+	// \Log::info($request->getContents()); 
+	$postFields = $request;
+
+	\Log::info($postFields); 
+
+
+
+	$token = 'b722748123d7296e38b559ceacccda1b5e0d2a3bb0ad3698597e505566a8971b';
+
+
+	// Demo Res
+
+	$results = array();
+	$results[] = array(
+		'id' => '1',
+
+		'title' => 'Restriction Enzymes: A History', 
+		'description' => 'Restriction enzymes cleave DNA at specific recognition sites and have many uses in molecular biology, genetics, and biotechnology. More than 4000 restriction enzymes are known today, of which more than 621 are commercially available, justifying their description by Nobel Prize winner Richard Roberts as \"the workhorses of molecular biology.\"', 
+		'permalink' => 'https://www.cshlpress.com/default.tpl?action=full&cart=1560281535435768050&--eqskudatarq=1256&typ=ps&newtitle=Restriction%20Enzymes%3A%20A%20History', 
+		'author_editors' => 'Wil A.M. Loenen, Leiden University Medical Center', 
+		'contents' => '<div class="box" style="display: block;"><h4>Contents</h4>
+    <dl> <dt style="padding-top:6px;">Preface</dt> <dt style="padding-top:6px;">Abbreviations</dt> <dt style="padding-top:6px;">Introduction</dt> <dt style="padding-top:6px;">1. Discovery of a Barrier to Infection and Host-Controlled Variation: 1952–1953</dt> <dt style="padding-top:6px;">2. Host-Controlled Variation Is Methylation and Restriction of DNA: The 1960s</dt> <dt style="padding-top:6px;">3. The Discovery of Type II Restriction Enzymes: The 1970s</dt> <dt style="padding-top:6px;">4. Expansion and Cloning Restriction Enzymes: The 1970s and Early 1980s</dt> <dt style="padding-top:6px;">5. The First Decade after the Discovery of EcoRI: Biochemistry and Sequence Analysis during the 1970s and Early 1980s</dt> <dt style="padding-top:6px;">6. Variety in Mechanisms and Structures of Restriction Enzymes: ∼1982–1993</dt> <dt style="padding-top:6px;">7. Crystal Structures of Type II Restriction Enzymes and Discovery of the Common Core of the Catalytic Domain: ∼1993−2004</dt> <dt style="padding-top:6px;">8. Improved Detection Methods, Single-Molecule Studies, and Whole-Genome Analyses Result in Novel Insights in Structures, Functions, and Applications of Type I, II, III, and IV Restriction Enzymes: ∼2004–2016</dt> <dt style="padding-top:6px;">Summary and Conclusions</dt> <dt style="padding-top:6px;">Appendix A: The History of Restriction Enzymes October 19–21, 2013 Meeting Program</dt> <dt style="padding-top:6px;">Appendix B: Modern-Day Applications of Restriction Enzymes</dt> <dt style="padding-top:6px;">Index</dt> <dt style="padding-top:6px;">About the Author</dt> </dl> 
+
+</div>', 
+		'isbn' => '978-1-621821-05-2 ', 
+		'publication_date' => 'January 1, 2044', 
+		'image_url' => 'https://www.cshlpress.com/image.tpl?img=restrictionenz_f.jpg&pagetitle=CSHLP%20%20%20%20%20%20%20%20%20%20%20%20America%20%20%20%20%20%20-%20Cover%20image%20%20%20%20%20%20%20-%20Restriction%20Enzymes:%20A%20History'
+
+		);
+
+		$results[] = array(
+
+			'id' => '2',
+
+		'title' => 'Function and Dysfunction of the Cochlea: From Mechanisms to Potential Therapies', 
+		'description' => 'The cochlea, the mammalian auditory organ, is a spiral-shaped structure in the inner ear that is responsible for hearing. It converts sound vibrations into electrical signals and sends them to the brain with a remarkable temporal precision. Defects in the cellular or molecular components of the cochlea can lead to deafness and other hearing impairments.',
+		'subject_areas' => 'Cell Biology; Human Biology and Disease', 
+		'permalink' => 'https://www.cshlpress.com/default.tpl?action=full&cart=1560281535435768050&--eqskudatarq=1224&typ=ps&newtitle=Function%20and%20Dysfunction%20of%20the%20Cochlea%3A%20From%20Mechanisms%20to%20Potential%20Therapies', 
+		'author_editors' => 'Edited by Guy P. Richardson, Sussex Neuroscience, University of Sussex; Christine Petit, Collège de France, Institut Pasteur', 
+		'contents' => 'contents', 
+		'isbn' => '978-1-621822-79-0', 
+		'publication_date' => 'January 1, 3022', 
+		'image_url' => 'https://www.cshlpress.com/image.tpl?img=funcdyscochlea_f.jpg&pagetitle=CSHLP%20%20%20%20%20%20%20%20%20%20%20%20America%20%20%20%20%20%20-%20Cover%20image%20%20%20%20%20%20%20-%20Function%20and%20Dysfunction%20of%20the%20Cochlea:%20From%20Mechanisms%20to%20Potential%20Therapies' 
+
+		);
+
+
+			$results[] = array(
+
+				'id' => '3',
+
+		'title' => 'Next-Generation Sequencing in Medicine', 
+		'description' => 'Next-generation sequencing technologies have the capacity to generate large numbers of DNA sequence reads at relatively high speed and low cost. These technologies have revolutionized biomedical research and are increasingly employed in clinical settings, where they can be used to detect inherited disorders, predict disease risk, and personalize therapies.
+
+',
+		'subject_areas' => 'Human Biology and Disease; Molecular Biology', 
+		'permalink' => 'https://www.cshlpress.com/default.tpl?action=full&cart=1560281535435768050&--eqskudatarq=1225&typ=ps&newtitle=Next-Generation%20Sequencing%20in%20Medicine', 
+		'author_editors' => 'Edited by W. Richard McCombie, Cold Spring Harbor Laboratory; Elaine R. Mardis, Institute for Genomic Medicine at Nationwide Children’s Hospital and The Ohio State University College of Medicine; James A. Knowles, SUNY Downstate Medical Center; John D. McPherson, University of California Davis, Comprehensive Cancer Center', 
+		'contents' => 'contents feed', 
+		'isbn' => '978-1-621821-13-7', 
+		'publication_date' => 'Janauary 22, 2222', 
+
+		'image_url' => 'https://cshlpress.com/image.tpl?img=nextgenseqmed_f.jpg&pagetitle=CSHLP%20%20%20%20%20%20%20%20%20%20%20%20America%20%20%20%20%20%20-%20Cover%20image%20%20%20%20%20%20%20-%20Next-Generation%20Sequencing%20in%20Medicine'
+		
+
+		
+		); 
+
+
+	
+		if (!isset($postFields['api_key']) || $postFields['api_key'] != $token) {
+			return json_encode($response = array(
+				'status' => 'error',
+				'messages' => array('Unauthorized api_key value submitted.'),
+			));
+		}
+
+
+	else{
+
+		$message = (!$postFields['last_updated']) ? 'First call to this endpoint' : 'Prior update performed: '.$postFields['last_updated'];
+		$response = array(
+			'status' => 'ok',
+			'result' => $results,
+			'messages' => array( $message ),
+		);
+
+ }
+
+	return json_encode($response);
+
+
+}
+
+
 public function returnFeed(Request $request){
 
 	// \Log::info($request->getContents()); 
