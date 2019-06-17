@@ -30,7 +30,7 @@ public function returnFeedBooks(Request $request){
 
 
 
-	$token = 'b722748123d7296e38b559ceacccda1b5e0d2a3bb0ad3698597e505566a8971b';
+	$token = env('CSHL_FEED_TOKEN'); 
 
 
 	// Demo Res
