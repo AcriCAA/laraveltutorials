@@ -225,7 +225,7 @@ public function returnCourses(Request $request){
 	$results = array();
 	$results[] = array(
 		'id' => '1', 
-		'title' => 'Neural Data Science',
+		'title' => 'Neural Data Science (test)',
 		'summary' => 'This course is designed to help neuroscience practitioners to develop the conceptual and practical capabilities to meet the challenges posed by the analysis of these hard-won and large data-sets. We will emphasize statistical issues such as the pre-processing of data, sampling biases, estimation methods and hypothesis testing as well as data wrangling (in MATLAB). We will work with data from a variety of recording technologies including multi-electrode array recordings, local field potentials and EEG as well as two-photon and wide-field optical imaging.
 
 ', 
@@ -305,7 +305,7 @@ Application Deadline: April 1, 2019</div><br>
 
 		$results[] = array(
 			'id' => '2', 
-		'title' => 'Synthetic Biology',
+		'title' => 'Synthetic Biology (test)',
 		'summary' => 'This course focuses on how the complexity of biological systems can be combined with traditional engineering approaches to result in new design principles for synthetic biology. The centerpiece of the course is an immersive laboratory experience in which students work in teams to learn the practical and theoretical underpinnings of synthetic biology research. Broadly, the course explores how cellular regulation (transcriptional, translational, post-translational, and epigenetic) can be used to engineer cells that accomplish well-defined goals.
 
 ', 
@@ -395,7 +395,7 @@ Application Deadline: April 1, 2019</div><br>
 
 			$results[] = array(
 				'id' => '3', 
-		'title' => 'Test 3',
+		'title' => 'Test 3 test',
 		'summary' => '', 
 		'start_date' => '', 
 		'end_date' => '', 
