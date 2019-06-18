@@ -138,6 +138,9 @@ public function returnMeetings(Request $request){
 		'year_code' => '20',
 		'title' => 'Regulatory & Non-Coding RNAs (test2)',
 		'abstract_deadline' => '2020-02-21',
+		'registration_url' => 'https://meetings.cshl.edu/meetingsregistration.aspx?meet=REGRNA&year=20',
+		'abstracts_url' => 'https://meetings.cshl.edu/abstracts.aspx?meet=REGRNA&year=20',
+		'payment_url' => 'https://meetings.cshl.edu/onlinepayment.aspx?meet=REGRNA&year=20',
 		'start_date' => '2020-05-12',
 		'end_date' => '2020-05-16',
 		'organizers' => '<div class=\"organziers16\"><strong>Ling-Ling Chen, <\/strong>CAS Shanghai Institute of Biological Sciences, China<strong><br>
